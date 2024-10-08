@@ -1,0 +1,161 @@
+set_global_assignment -name TOP_LEVEL_ENTITY lab1
+#============================================================
+# Build by Altera University Program
+#============================================================
+set_global_assignment -name FAMILY "Cyclone IV E"
+set_global_assignment -name DEVICE EP4CE115F29C8
+set_global_assignment -name USE_GENERATED_PHYSICAL_CONSTRAINTS OFF -section_id eda_blast_fpga
+set_global_assignment -name CYCLONEII_RESERVE_NCEO_AFTER_CONFIGURATION "USE AS REGULAR IO"
+
+#============================================================
+# CLOCK
+#============================================================
+
+
+#============================================================
+# Sma
+#============================================================
+
+#============================================================
+# LED
+#============================================================
+
+
+#============================================================
+# KEY
+#============================================================
+
+#============================================================
+# SW
+#============================================================
+
+#============================================================
+# SEG7
+#============================================================
+
+#============================================================
+# LCD
+#============================================================
+
+#============================================================
+# RS232
+#============================================================
+
+#============================================================
+# PS2
+#============================================================
+
+#============================================================
+# SDCARD
+#============================================================
+
+#============================================================
+# VGA
+#============================================================
+
+#============================================================
+# Audio
+#============================================================
+
+#============================================================
+# I2C for EEPROM
+#============================================================
+
+#============================================================
+# I2C for Audioand Tv-Decode 1 and 2
+#============================================================
+
+#============================================================
+# Ethernet 0
+#============================================================
+
+#============================================================
+# Ethernet 1
+#============================================================
+
+
+
+#============================================================
+# TV Decoder
+#============================================================
+
+#============================================================
+# USB 
+#============================================================
+
+#============================================================
+# IR Receiver
+#============================================================
+
+#============================================================
+# SDRAM
+#============================================================
+
+#============================================================
+# SRAM
+#============================================================
+
+#============================================================
+# Flash
+#============================================================
+
+#============================================================
+# GPIO, GPIO connect to GPIO Default
+#============================================================
+
+#============================================================
+# HSMC, HSMC connect to HSMC Default
+#============================================================
+
+#============================================================
+# HSMC, HSMC connect to HSMC Default
+#============================================================
+
+#============================================================
+# End of pin assignments by Altera University Program
+#============================================================
+
+
+set_instance_assignment -name TSU_REQUIREMENT "10 ns" -from * -to *
+
+
+
+set_global_assignment -name LAST_QUARTUS_VERSION "13.0 SP1"
+set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
+set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
+set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
+set_location_assignment PIN_AB28 -to Lm[0]
+set_location_assignment PIN_AC28 -to Lm[1]
+set_location_assignment PIN_AC27 -to Lm[2]
+set_location_assignment PIN_AD27 -to Lm[3]
+set_location_assignment PIN_AB27 -to Lm[4]
+set_location_assignment PIN_AC26 -to Lm[5]
+set_location_assignment PIN_AD26 -to Lm[6]
+set_location_assignment PIN_AB26 -to Lm[7]
+set_location_assignment PIN_AC25 -to Rm0[0]
+set_location_assignment PIN_AC24 -to Rm0[1]
+set_location_assignment PIN_AB24 -to Rm0[2]
+set_location_assignment PIN_AB23 -to Rm0[3]
+set_location_assignment PIN_AA24 -to Rm0[4]
+set_location_assignment PIN_AA23 -to Rm0[5]
+set_location_assignment PIN_AA22 -to Rm0[6]
+set_location_assignment PIN_Y24 -to Rm0[7]
+set_location_assignment PIN_G18 -to display[0]
+set_location_assignment PIN_F22 -to display[1]
+set_location_assignment PIN_E17 -to display[2]
+set_location_assignment PIN_L26 -to display[3]
+set_location_assignment PIN_L25 -to display[4]
+set_location_assignment PIN_J22 -to display[5]
+set_location_assignment PIN_H22 -to display[6]
+set_global_assignment -name VECTOR_WAVEFORM_FILE output_files/Waveform.vwf
+set_global_assignment -name SIMULATION_MODE FUNCTIONAL
+set_global_assignment -name EDA_SIMULATION_TOOL "ModelSim-Altera (Verilog)"
+set_global_assignment -name EDA_OUTPUT_DATA_FORMAT "VERILOG HDL" -section_id eda_simulation
+set_global_assignment -name EDA_GENERATE_FUNCTIONAL_NETLIST ON -section_id eda_simulation
+set_location_assignment PIN_Y2 -to clock
+set_location_assignment PIN_M23 -to left
+set_location_assignment PIN_N21 -to right
+set_location_assignment PIN_M21 -to reset
+set_global_assignment -name VECTOR_WAVEFORM_FILE output_files/Waveform1.vwf
+set_global_assignment -name INCREMENTAL_VECTOR_INPUT_SOURCE "D:/CEG3155/Lab1/output_files/Waveform1.vwf"
+set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top

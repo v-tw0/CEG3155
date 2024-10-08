@@ -1,0 +1,35 @@
+library IEEE;
+use IEEE.STD_LOGIC_1164.ALL;
+
+-- Entity 
+entity comparator1bit is
+    port (
+		clk : in STD_LOGIC;
+		input1 : in STD_LOGIC;
+		input2 : in STD_LOGIC;
+	
+		output1gt2 : out STD_LOGIC;
+		output1lt2 : out STD_LOGIC;
+		output1eq2 : out STD_LOGIC
+	);
+end comparator1bit;
+
+--Architecture
+architecture Behavioural of comparator1bit is
+	signal int_1gt2, int_1lt2, int_1eq2 : STD_LOGIC;
+	
+	-- For each operation, comparing inputs 1 and 2 can be done as such:
+	-- 1>2: 1 && 2'
+	-- 1<2: 2 && 1'
+	-- 1=2: 1 && 2
+	begin
+		int_1gt2 <= input1 and not(input2);
+		int_1lt2 <= input2 and not(input1);
+		int_1eq2 <= input1 and input2;
+		
+		output1eq2 <= int_1gt2;
+		output1lt2 <= int_1lt2;
+		output1eq2 <= int_1eq2;
+		
+end rtl;
+	

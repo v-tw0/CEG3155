@@ -1,0 +1,37 @@
+library IEEE;
+use IEEE.STD_LOGIC_1164.ALL;
+
+-- Entity declaration for the 8-bit register
+entity register8bit is
+    Port (
+        reset : in  STD_LOGIC;         -- Asynchronous reset
+        clk   : in  STD_LOGIC;         -- Clock signal
+        load  : in  STD_LOGIC;         -- Load enable signal
+        input : in  STD_LOGIC_VECTOR(7 downto 0);  -- 8-bit parallel input
+        output: out STD_LOGIC_VECTOR(7 downto 0)   -- 8-bit output
+    );
+end register8bit;
+
+-- Architecture declaration
+architecture Behavioral of register8bit is
+    -- Internal signal to store the register value
+    signal reg_value: STD_LOGIC_VECTOR(7 downto 0);
+begin
+    -- Process block to implement the register functionality
+    process(clk, reset)
+    begin
+        if reset = '1' then
+            -- Asynchronous reset: set register to zero
+            reg_value <= (others => '0');
+        elsif rising_edge(clk) then
+            if load = '1' then
+                -- Load input value into the register
+                reg_value <= input;
+            end if;
+        end if;
+    end process;
+    
+    -- Output assignment
+    output <= reg_value;
+
+end Behavioral;

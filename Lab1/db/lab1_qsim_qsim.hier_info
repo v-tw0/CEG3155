@@ -1,0 +1,474 @@
+|lab1
+LeqR <= comparator1bit:inst3.output1eq2
+clock => comparator1bit:inst3.clk
+clock => register8bit:inst2.load
+clock => register8bit:inst2.clk
+clock => mux2bit:inst6.clk
+clock => rshregister8bit:inst5.clk
+clock => lshregister8bit:inst.clk
+left => comparator1bit:inst3.input1
+left => mux2bit:inst6.input_left
+left => rshregister8bit:inst5.lsh
+left => lshregister8bit:inst.lsh
+right => comparator1bit:inst3.input2
+right => mux2bit:inst6.input_right
+display[0] <= register8bit:inst2.output[0]
+display[1] <= register8bit:inst2.output[1]
+display[2] <= register8bit:inst2.output[2]
+display[3] <= register8bit:inst2.output[3]
+display[4] <= register8bit:inst2.output[4]
+display[5] <= register8bit:inst2.output[5]
+display[6] <= register8bit:inst2.output[6]
+display[7] <= register8bit:inst2.output[7]
+reset => register8bit:inst2.reset
+setGND[0] => mux2bit:inst6.input1[0]
+setGND[1] => mux2bit:inst6.input1[1]
+setGND[2] => mux2bit:inst6.input1[2]
+setGND[3] => mux2bit:inst6.input1[3]
+setGND[4] => mux2bit:inst6.input1[4]
+setGND[5] => mux2bit:inst6.input1[5]
+setGND[6] => mux2bit:inst6.input1[6]
+setGND[7] => mux2bit:inst6.input1[7]
+Rm0[0] => rshregister8bit:inst5.input[0]
+Rm0[1] => rshregister8bit:inst5.input[1]
+Rm0[2] => rshregister8bit:inst5.input[2]
+Rm0[3] => rshregister8bit:inst5.input[3]
+Rm0[4] => rshregister8bit:inst5.input[4]
+Rm0[5] => rshregister8bit:inst5.input[5]
+Rm0[6] => rshregister8bit:inst5.input[6]
+Rm0[7] => rshregister8bit:inst5.input[7]
+Lm[0] => lshregister8bit:inst.input[0]
+Lm[1] => lshregister8bit:inst.input[1]
+Lm[2] => lshregister8bit:inst.input[2]
+Lm[3] => lshregister8bit:inst.input[3]
+Lm[4] => lshregister8bit:inst.input[4]
+Lm[5] => lshregister8bit:inst.input[5]
+Lm[6] => lshregister8bit:inst.input[6]
+Lm[7] => lshregister8bit:inst.input[7]
+
+
+|lab1|comparator1bit:inst3
+clk => ~NO_FANOUT~
+input1 => int_1gt2~0.IN0
+input1 => int_1eq2~0.IN0
+input1 => int_1lt2~0.IN0
+input2 => int_1lt2~0.IN1
+input2 => int_1eq2~0.IN1
+input2 => int_1gt2~0.IN1
+output1gt2 <= int_1gt2~0.DB_MAX_OUTPUT_PORT_TYPE
+output1lt2 <= int_1lt2~0.DB_MAX_OUTPUT_PORT_TYPE
+output1eq2 <= int_1eq2~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|lab1|register8bit:inst2
+reset => DFF_Enable:b7.reset
+reset => DFF_Enable:b6.reset
+reset => DFF_Enable:b5.reset
+reset => DFF_Enable:b4.reset
+reset => DFF_Enable:b3.reset
+reset => DFF_Enable:b2.reset
+reset => DFF_Enable:b1.reset
+reset => DFF_Enable:b0.reset
+load => comb~0.IN0
+load => comb~1.IN0
+load => comb~2.IN0
+load => comb~3.IN0
+load => comb~4.IN0
+load => comb~5.IN0
+load => comb~6.IN0
+load => comb~7.IN0
+load => DFF_Enable:b7.enable
+load => DFF_Enable:b6.enable
+load => DFF_Enable:b5.enable
+load => DFF_Enable:b4.enable
+load => DFF_Enable:b3.enable
+load => DFF_Enable:b2.enable
+load => DFF_Enable:b1.enable
+load => DFF_Enable:b0.enable
+clk => DFF_Enable:b7.clk
+clk => DFF_Enable:b6.clk
+clk => DFF_Enable:b5.clk
+clk => DFF_Enable:b4.clk
+clk => DFF_Enable:b3.clk
+clk => DFF_Enable:b2.clk
+clk => DFF_Enable:b1.clk
+clk => DFF_Enable:b0.clk
+input[0] => comb~7.IN1
+input[1] => comb~6.IN1
+input[2] => comb~5.IN1
+input[3] => comb~4.IN1
+input[4] => comb~3.IN1
+input[5] => comb~2.IN1
+input[6] => comb~1.IN1
+input[7] => comb~0.IN1
+output[0] <= DFF_Enable:b0.q
+output[1] <= DFF_Enable:b1.q
+output[2] <= DFF_Enable:b2.q
+output[3] <= DFF_Enable:b3.q
+output[4] <= DFF_Enable:b4.q
+output[5] <= DFF_Enable:b5.q
+output[6] <= DFF_Enable:b6.q
+output[7] <= DFF_Enable:b7.q
+
+
+|lab1|register8bit:inst2|DFF_Enable:b7
+clk => int_q.CLK
+reset => int_q.ACLR
+enable => int_q.ENA
+d => int_q.DATAIN
+q <= int_q.DB_MAX_OUTPUT_PORT_TYPE
+qNot <= int_q.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|lab1|register8bit:inst2|DFF_Enable:b6
+clk => int_q.CLK
+reset => int_q.ACLR
+enable => int_q.ENA
+d => int_q.DATAIN
+q <= int_q.DB_MAX_OUTPUT_PORT_TYPE
+qNot <= int_q.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|lab1|register8bit:inst2|DFF_Enable:b5
+clk => int_q.CLK
+reset => int_q.ACLR
+enable => int_q.ENA
+d => int_q.DATAIN
+q <= int_q.DB_MAX_OUTPUT_PORT_TYPE
+qNot <= int_q.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|lab1|register8bit:inst2|DFF_Enable:b4
+clk => int_q.CLK
+reset => int_q.ACLR
+enable => int_q.ENA
+d => int_q.DATAIN
+q <= int_q.DB_MAX_OUTPUT_PORT_TYPE
+qNot <= int_q.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|lab1|register8bit:inst2|DFF_Enable:b3
+clk => int_q.CLK
+reset => int_q.ACLR
+enable => int_q.ENA
+d => int_q.DATAIN
+q <= int_q.DB_MAX_OUTPUT_PORT_TYPE
+qNot <= int_q.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|lab1|register8bit:inst2|DFF_Enable:b2
+clk => int_q.CLK
+reset => int_q.ACLR
+enable => int_q.ENA
+d => int_q.DATAIN
+q <= int_q.DB_MAX_OUTPUT_PORT_TYPE
+qNot <= int_q.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|lab1|register8bit:inst2|DFF_Enable:b1
+clk => int_q.CLK
+reset => int_q.ACLR
+enable => int_q.ENA
+d => int_q.DATAIN
+q <= int_q.DB_MAX_OUTPUT_PORT_TYPE
+qNot <= int_q.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|lab1|register8bit:inst2|DFF_Enable:b0
+clk => int_q.CLK
+reset => int_q.ACLR
+enable => int_q.ENA
+d => int_q.DATAIN
+q <= int_q.DB_MAX_OUTPUT_PORT_TYPE
+qNot <= int_q.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|lab1|mux2bit:inst6
+input1[0] => selected_input~15.DATAB
+input1[1] => selected_input~14.DATAB
+input1[2] => selected_input~13.DATAB
+input1[3] => selected_input~12.DATAB
+input1[4] => selected_input~11.DATAB
+input1[5] => selected_input~10.DATAB
+input1[6] => selected_input~9.DATAB
+input1[7] => selected_input~8.DATAB
+input2[0] => selected_input~7.DATAB
+input2[1] => selected_input~6.DATAB
+input2[2] => selected_input~5.DATAB
+input2[3] => selected_input~4.DATAB
+input2[4] => selected_input~3.DATAB
+input2[5] => selected_input~2.DATAB
+input2[6] => selected_input~1.DATAB
+input2[7] => selected_input~0.DATAB
+input3[0] => selected_input~7.DATAA
+input3[1] => selected_input~6.DATAA
+input3[2] => selected_input~5.DATAA
+input3[3] => selected_input~4.DATAA
+input3[4] => selected_input~3.DATAA
+input3[5] => selected_input~2.DATAA
+input3[6] => selected_input~1.DATAA
+input3[7] => selected_input~0.DATAA
+input_left => selected_input~8.OUTPUTSELECT
+input_left => selected_input~9.OUTPUTSELECT
+input_left => selected_input~10.OUTPUTSELECT
+input_left => selected_input~11.OUTPUTSELECT
+input_left => selected_input~12.OUTPUTSELECT
+input_left => selected_input~13.OUTPUTSELECT
+input_left => selected_input~14.OUTPUTSELECT
+input_left => selected_input~15.OUTPUTSELECT
+input_right => selected_input~0.OUTPUTSELECT
+input_right => selected_input~1.OUTPUTSELECT
+input_right => selected_input~2.OUTPUTSELECT
+input_right => selected_input~3.OUTPUTSELECT
+input_right => selected_input~4.OUTPUTSELECT
+input_right => selected_input~5.OUTPUTSELECT
+input_right => selected_input~6.OUTPUTSELECT
+input_right => selected_input~7.OUTPUTSELECT
+clk => selected_input[0].CLK
+clk => selected_input[1].CLK
+clk => selected_input[2].CLK
+clk => selected_input[3].CLK
+clk => selected_input[4].CLK
+clk => selected_input[5].CLK
+clk => selected_input[6].CLK
+clk => selected_input[7].CLK
+output[0] <= selected_input[0].DB_MAX_OUTPUT_PORT_TYPE
+output[1] <= selected_input[1].DB_MAX_OUTPUT_PORT_TYPE
+output[2] <= selected_input[2].DB_MAX_OUTPUT_PORT_TYPE
+output[3] <= selected_input[3].DB_MAX_OUTPUT_PORT_TYPE
+output[4] <= selected_input[4].DB_MAX_OUTPUT_PORT_TYPE
+output[5] <= selected_input[5].DB_MAX_OUTPUT_PORT_TYPE
+output[6] <= selected_input[6].DB_MAX_OUTPUT_PORT_TYPE
+output[7] <= selected_input[7].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|lab1|rshregister8bit:inst5
+clk => DFF_Enable:b7.clk
+clk => DFF_Enable:b6.clk
+clk => DFF_Enable:b5.clk
+clk => DFF_Enable:b4.clk
+clk => DFF_Enable:b3.clk
+clk => DFF_Enable:b2.clk
+clk => DFF_Enable:b1.clk
+clk => DFF_Enable:b0.clk
+reset => ~NO_FANOUT~
+lsh => comb~0.IN1
+lsh => comb~3.IN1
+lsh => comb~6.IN1
+lsh => comb~9.IN1
+lsh => comb~12.IN1
+lsh => comb~15.IN1
+lsh => comb~18.IN1
+lsh => comb~1.IN0
+lsh => comb~4.IN0
+lsh => comb~7.IN0
+lsh => comb~10.IN0
+lsh => comb~13.IN0
+lsh => comb~16.IN0
+lsh => comb~19.IN0
+lsh => comb~21.IN0
+input[0] => comb~21.IN1
+input[1] => comb~19.IN1
+input[2] => comb~16.IN1
+input[3] => comb~13.IN1
+input[4] => comb~10.IN1
+input[5] => comb~7.IN1
+input[6] => comb~4.IN1
+input[7] => comb~1.IN1
+output[0] <= DFF_Enable:b0.q
+output[1] <= DFF_Enable:b1.q
+output[2] <= DFF_Enable:b2.q
+output[3] <= DFF_Enable:b3.q
+output[4] <= DFF_Enable:b4.q
+output[5] <= DFF_Enable:b5.q
+output[6] <= DFF_Enable:b6.q
+output[7] <= DFF_Enable:b7.q
+
+
+|lab1|rshregister8bit:inst5|DFF_Enable:b7
+clk => int_q.CLK
+reset => int_q.ACLR
+enable => int_q.ENA
+d => int_q.DATAIN
+q <= int_q.DB_MAX_OUTPUT_PORT_TYPE
+qNot <= int_q.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|lab1|rshregister8bit:inst5|DFF_Enable:b6
+clk => int_q.CLK
+reset => int_q.ACLR
+enable => int_q.ENA
+d => int_q.DATAIN
+q <= int_q.DB_MAX_OUTPUT_PORT_TYPE
+qNot <= int_q.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|lab1|rshregister8bit:inst5|DFF_Enable:b5
+clk => int_q.CLK
+reset => int_q.ACLR
+enable => int_q.ENA
+d => int_q.DATAIN
+q <= int_q.DB_MAX_OUTPUT_PORT_TYPE
+qNot <= int_q.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|lab1|rshregister8bit:inst5|DFF_Enable:b4
+clk => int_q.CLK
+reset => int_q.ACLR
+enable => int_q.ENA
+d => int_q.DATAIN
+q <= int_q.DB_MAX_OUTPUT_PORT_TYPE
+qNot <= int_q.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|lab1|rshregister8bit:inst5|DFF_Enable:b3
+clk => int_q.CLK
+reset => int_q.ACLR
+enable => int_q.ENA
+d => int_q.DATAIN
+q <= int_q.DB_MAX_OUTPUT_PORT_TYPE
+qNot <= int_q.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|lab1|rshregister8bit:inst5|DFF_Enable:b2
+clk => int_q.CLK
+reset => int_q.ACLR
+enable => int_q.ENA
+d => int_q.DATAIN
+q <= int_q.DB_MAX_OUTPUT_PORT_TYPE
+qNot <= int_q.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|lab1|rshregister8bit:inst5|DFF_Enable:b1
+clk => int_q.CLK
+reset => int_q.ACLR
+enable => int_q.ENA
+d => int_q.DATAIN
+q <= int_q.DB_MAX_OUTPUT_PORT_TYPE
+qNot <= int_q.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|lab1|rshregister8bit:inst5|DFF_Enable:b0
+clk => int_q.CLK
+reset => int_q.ACLR
+enable => int_q.ENA
+d => int_q.DATAIN
+q <= int_q.DB_MAX_OUTPUT_PORT_TYPE
+qNot <= int_q.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|lab1|lshregister8bit:inst
+clk => DFF_Enable:b7.clk
+clk => DFF_Enable:b6.clk
+clk => DFF_Enable:b5.clk
+clk => DFF_Enable:b4.clk
+clk => DFF_Enable:b3.clk
+clk => DFF_Enable:b2.clk
+clk => DFF_Enable:b1.clk
+clk => DFF_Enable:b0.clk
+reset => ~NO_FANOUT~
+lsh => comb~0.IN1
+lsh => comb~3.IN1
+lsh => comb~6.IN1
+lsh => comb~9.IN1
+lsh => comb~12.IN1
+lsh => comb~15.IN1
+lsh => comb~18.IN1
+lsh => comb~1.IN1
+lsh => comb~4.IN1
+lsh => comb~7.IN1
+lsh => comb~10.IN1
+lsh => comb~13.IN1
+lsh => comb~16.IN1
+lsh => comb~19.IN1
+lsh => comb~21.IN0
+input[0] => comb~21.IN1
+input[1] => ~NO_FANOUT~
+input[2] => ~NO_FANOUT~
+input[3] => ~NO_FANOUT~
+input[4] => ~NO_FANOUT~
+input[5] => ~NO_FANOUT~
+input[6] => ~NO_FANOUT~
+input[7] => ~NO_FANOUT~
+output[0] <= DFF_Enable:b0.q
+output[1] <= DFF_Enable:b1.q
+output[2] <= DFF_Enable:b2.q
+output[3] <= DFF_Enable:b3.q
+output[4] <= DFF_Enable:b4.q
+output[5] <= DFF_Enable:b5.q
+output[6] <= DFF_Enable:b6.q
+output[7] <= DFF_Enable:b7.q
+
+
+|lab1|lshregister8bit:inst|DFF_Enable:b7
+clk => int_q.CLK
+reset => int_q.ACLR
+enable => int_q.ENA
+d => int_q.DATAIN
+q <= int_q.DB_MAX_OUTPUT_PORT_TYPE
+qNot <= int_q.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|lab1|lshregister8bit:inst|DFF_Enable:b6
+clk => int_q.CLK
+reset => int_q.ACLR
+enable => int_q.ENA
+d => int_q.DATAIN
+q <= int_q.DB_MAX_OUTPUT_PORT_TYPE
+qNot <= int_q.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|lab1|lshregister8bit:inst|DFF_Enable:b5
+clk => int_q.CLK
+reset => int_q.ACLR
+enable => int_q.ENA
+d => int_q.DATAIN
+q <= int_q.DB_MAX_OUTPUT_PORT_TYPE
+qNot <= int_q.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|lab1|lshregister8bit:inst|DFF_Enable:b4
+clk => int_q.CLK
+reset => int_q.ACLR
+enable => int_q.ENA
+d => int_q.DATAIN
+q <= int_q.DB_MAX_OUTPUT_PORT_TYPE
+qNot <= int_q.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|lab1|lshregister8bit:inst|DFF_Enable:b3
+clk => int_q.CLK
+reset => int_q.ACLR
+enable => int_q.ENA
+d => int_q.DATAIN
+q <= int_q.DB_MAX_OUTPUT_PORT_TYPE
+qNot <= int_q.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|lab1|lshregister8bit:inst|DFF_Enable:b2
+clk => int_q.CLK
+reset => int_q.ACLR
+enable => int_q.ENA
+d => int_q.DATAIN
+q <= int_q.DB_MAX_OUTPUT_PORT_TYPE
+qNot <= int_q.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|lab1|lshregister8bit:inst|DFF_Enable:b1
+clk => int_q.CLK
+reset => int_q.ACLR
+enable => int_q.ENA
+d => int_q.DATAIN
+q <= int_q.DB_MAX_OUTPUT_PORT_TYPE
+qNot <= int_q.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|lab1|lshregister8bit:inst|DFF_Enable:b0
+clk => int_q.CLK
+reset => int_q.ACLR
+enable => int_q.ENA
+d => int_q.DATAIN
+q <= int_q.DB_MAX_OUTPUT_PORT_TYPE
+qNot <= int_q.DB_MAX_OUTPUT_PORT_TYPE
+
+

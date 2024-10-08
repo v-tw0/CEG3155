@@ -1,0 +1,44 @@
+library ieee;
+use ieee.std_logic_1164.all;
+
+entity DFF_Enable is
+	port (
+		i_clock : in std_logic;
+		i_d : in std_logic;
+		o_q, o_qBar : out std_logic
+	);
+end DFF_Enable;
+architecture Behaviour of DFF_Enable is
+	signal int_q, int_qBar : STD_LOGIC;
+	signal int_d, int_dBar : STD_LOGIC;
+	signal int_notD, int_notClock : STD_LOGIC;
+	component enabledSRLatch
+		port (
+			i_set, i_reset : in STD_LOGIC;
+			i_enable : in STD_LOGIC;
+			o_q, o_qBar : out STD_LOGIC
+		);
+	end component;
+begin
+	--concurrent signal
+	masterLatch : enabledSRLatch
+	port map(
+		i_set => i_d, 
+		i_reset => int_notD, 
+		i_enable => int_notClock, 
+		o_q => int_q, 
+		o_qBar => int_qBar
+	);
+	slaveLatch : enabledSRLatch
+	port map(
+		i_set => int_q, 
+		i_reset => int_qBar, 
+		i_enable => i_clock, 
+		o_q => o_q, 
+		o_qBar => o_qBar
+	);
+
+	--Output Driver
+	int_notD <= not(i_d);
+	int_notClock <= not(i_clock);
+end Behaviour;

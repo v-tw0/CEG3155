@@ -1,0 +1,102 @@
+library ieee;
+use ieee.std_logic_1164.all;
+
+-- Entity
+entity lshregister8bit is
+	port (
+		clk, reset, lsh : in STD_LOGIC;
+		input : in STD_LOGIC_VECTOR(7 downto 0);
+		output : out STD_LOGIC_VECTOR(7 downto 0);
+	);
+end lshregister8bit;
+
+-- Architecture
+architecture rtl of lshregister8bit is 
+	-- Internal signal for values
+	signal int_value: STD_LOGIC_VECTOR(7 downto 0);
+	
+	--D FF with enable component
+	component DFF_Enable
+		port (
+			clock : in STD_LOGIC;
+			d : in STD_LOGIC;
+			out : STD_LOGIC;
+		)
+	end component;
+	
+	begin
+    
+	 -- D flip-flops for each bit
+    -- Bit 7
+    b7: DFF_Enable
+        port map(
+            i_d => i_value(7) or (int_value(6) and i_leftshift),
+            i_clock => i_clock,
+            o_q => int_value(7)
+        );
+
+    -- Bit 6
+    b6: DFF_Enable
+        port map(
+            i_d => i_value(6) or (int_value(5) and i_leftshift),
+            i_clock => i_clock,
+            o_q => int_value(6)
+        );
+
+    -- Bit 5
+    b5: DFF_Enable
+        port map(
+            i_d => i_value(5) or (int_value(4) and i_leftshift),
+            i_clock => i_clock,
+            o_q => int_value(5)
+        );
+
+    -- Bit 4
+    b4: DFF_Enable
+        port map(
+            i_d => i_value(4) or (int_value(3) and i_leftshift),
+            i_clock => i_clock,
+            o_q => int_value(4)
+        );
+
+    -- Bit 3
+    b3: DFF_Enable
+        port map(
+            i_d => i_value(3) or (int_value(2) and i_leftshift),
+            i_clock => i_clock,
+            o_q => int_value(3)
+        );
+
+    -- Bit 2
+    b2: DFF_Enable
+        port map(
+            i_d => i_value(2) or (int_value(1) and i_leftshift),
+            i_clock => i_clock,
+            o_q => int_value(2)
+        );
+
+    -- Bit 1
+    b1: DFF_Enable
+        port map(
+            i_d => i_value(1) or (int_value(0) and i_leftshift),
+            i_clock => i_clock,
+            o_q => int_value(1)
+        );
+
+    -- Bit 0 
+    b0: DFF_Enable
+        port map(
+            i_d => i_value(0) and not(i_leftshift),
+            i_clock => i_clock,
+            o_q => int_value(0)
+        );
+
+    -- Output assignment
+    o_value <= int_value;
+
+end rtl;
+	
+	
+	
+	
+		
