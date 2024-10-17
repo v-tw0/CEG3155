@@ -1,5 +1,5 @@
 Analysis & Synthesis report for lab2
-Mon Oct 07 23:42:24 2024
+Tue Oct 15 17:38:58 2024
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -10,7 +10,13 @@ Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edit
   2. Analysis & Synthesis Summary
   3. Analysis & Synthesis Settings
   4. Parallel Compilation
-  5. Analysis & Synthesis Messages
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. General Register Statistics
+  9. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 10. Elapsed Time Per Partition
+ 11. Analysis & Synthesis Messages
 
 
 
@@ -36,20 +42,20 @@ applicable agreement for further details.
 +--------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                         ;
 +------------------------------------+-------------------------------------------------+
-; Analysis & Synthesis Status        ; Failed - Mon Oct 07 23:42:24 2024               ;
+; Analysis & Synthesis Status        ; Successful - Tue Oct 15 17:38:58 2024           ;
 ; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
 ; Revision Name                      ; lab2                                            ;
-; Top-level Entity Name              ; lab2                                            ;
+; Top-level Entity Name              ; testblock                                       ;
 ; Family                             ; Cyclone IV E                                    ;
-; Total logic elements               ; N/A until Partition Merge                       ;
-;     Total combinational functions  ; N/A until Partition Merge                       ;
-;     Dedicated logic registers      ; N/A until Partition Merge                       ;
-; Total registers                    ; N/A until Partition Merge                       ;
-; Total pins                         ; N/A until Partition Merge                       ;
-; Total virtual pins                 ; N/A until Partition Merge                       ;
-; Total memory bits                  ; N/A until Partition Merge                       ;
-; Embedded Multiplier 9-bit elements ; N/A until Partition Merge                       ;
-; Total PLLs                         ; N/A until Partition Merge                       ;
+; Total logic elements               ; 0                                               ;
+;     Total combinational functions  ; 0                                               ;
+;     Dedicated logic registers      ; 0                                               ;
+; Total registers                    ; 0                                               ;
+; Total pins                         ; 18                                              ;
+; Total virtual pins                 ; 0                                               ;
+; Total memory bits                  ; 0                                               ;
+; Embedded Multiplier 9-bit elements ; 0                                               ;
+; Total PLLs                         ; 0                                               ;
 +------------------------------------+-------------------------------------------------+
 
 
@@ -59,7 +65,7 @@ applicable agreement for further details.
 ; Option                                                                     ; Setting            ; Default Value      ;
 +----------------------------------------------------------------------------+--------------------+--------------------+
 ; Device                                                                     ; EP4CE115F29C7      ;                    ;
-; Top-level entity name                                                      ; lab2               ; lab2               ;
+; Top-level entity name                                                      ; testblock          ; lab2               ;
 ; Family name                                                                ; Cyclone IV E       ; Cyclone IV GX      ;
 ; Use smart compilation                                                      ; Off                ; Off                ;
 ; Enable parallel Assembler and TimeQuest Timing Analyzer during compilation ; On                 ; On                 ;
@@ -157,13 +163,95 @@ applicable agreement for further details.
 +----------------------------+-------------+
 
 
++-----------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                  ;
++----------------------------------+-----------------+------------------------------------+-------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                          ; File Name with Absolute Path        ; Library ;
++----------------------------------+-----------------+------------------------------------+-------------------------------------+---------+
+; multiplier4bit.vhd               ; yes             ; User VHDL File                     ; H:/CEG3155/Lab 2/multiplier4bit.vhd ;         ;
+; testblock.bdf                    ; yes             ; User Block Diagram/Schematic File  ; H:/CEG3155/Lab 2/testblock.bdf      ;         ;
++----------------------------------+-----------------+------------------------------------+-------------------------------------+---------+
+
+
++----------------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary                    ;
++---------------------------------------------+------------------+
+; Resource                                    ; Usage            ;
++---------------------------------------------+------------------+
+;                                             ;                  ;
+; Total combinational functions               ; 0                ;
+; Logic element usage by number of LUT inputs ;                  ;
+;     -- 4 input functions                    ; 0                ;
+;     -- 3 input functions                    ; 0                ;
+;     -- <=2 input functions                  ; 0                ;
+;                                             ;                  ;
+; Logic elements by mode                      ;                  ;
+;     -- normal mode                          ; 0                ;
+;     -- arithmetic mode                      ; 0                ;
+;                                             ;                  ;
+; Total registers                             ; 0                ;
+;     -- Dedicated logic registers            ; 0                ;
+;     -- I/O registers                        ; 0                ;
+;                                             ;                  ;
+; I/O pins                                    ; 18               ;
+; Embedded Multiplier 9-bit elements          ; 0                ;
+; Maximum fan-out node                        ; pin_name1~output ;
+; Maximum fan-out                             ; 1                ;
+; Total fan-out                               ; 18               ;
+; Average fan-out                             ; 0.50             ;
++---------------------------------------------+------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                         ;
++----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------+--------------+
+; Compilation Hierarchy Node ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name ; Library Name ;
++----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------+--------------+
+; |testblock                 ; 0 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 18   ; 0            ; |testblock          ; work         ;
++----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 0     ;
+; Number of registers using Synchronous Clear  ; 0     ;
+; Number of registers using Synchronous Load   ; 0     ;
+; Number of registers using Asynchronous Clear ; 0     ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 0     ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                           ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                 ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------+
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; No         ; |testblock|multiplier4bit:inst|o_Result[7] ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------+
+
+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:00     ;
++----------------+--------------+
+
+
 +-------------------------------+
 ; Analysis & Synthesis Messages ;
 +-------------------------------+
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
-    Info: Processing started: Mon Oct 07 23:42:23 2024
+    Info: Processing started: Tue Oct 15 17:38:55 2024
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off lab2 -c lab2
 Info (20030): Parallel compilation is enabled and will use 16 of the 16 processors detected
 Info (12021): Found 2 design units, including 1 entities, in source file addsub4bit.vhd
@@ -172,11 +260,51 @@ Info (12021): Found 2 design units, including 1 entities, in source file addsub4
 Info (12021): Found 2 design units, including 1 entities, in source file onebitadder.vhd
     Info (12022): Found design unit 1: oneBitAdder-rtl
     Info (12023): Found entity 1: oneBitAdder
-Error (12007): Top-level design entity "lab2" is undefined
-Error: Quartus II 64-Bit Analysis & Synthesis was unsuccessful. 1 error, 0 warnings
-    Error: Peak virtual memory: 4614 megabytes
-    Error: Processing ended: Mon Oct 07 23:42:24 2024
-    Error: Elapsed time: 00:00:01
-    Error: Total CPU time (on all processors): 00:00:01
+Info (12021): Found 1 design units, including 1 entities, in source file lab2.bdf
+    Info (12023): Found entity 1: lab2
+Info (12021): Found 2 design units, including 1 entities, in source file multiplier4bit.vhd
+    Info (12022): Found design unit 1: multiplier4bit-Behavioral
+    Info (12023): Found entity 1: multiplier4bit
+Info (12021): Found 1 design units, including 1 entities, in source file testblock.bdf
+    Info (12023): Found entity 1: testblock
+Info (12127): Elaborating entity "testblock" for the top level hierarchy
+Info (12128): Elaborating entity "multiplier4bit" for hierarchy "multiplier4bit:inst"
+Warning (10492): VHDL Process Statement warning at multiplier4bit.vhd(27): signal "B" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at multiplier4bit.vhd(31): signal "TempB" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at multiplier4bit.vhd(32): signal "Sum" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at multiplier4bit.vhd(32): signal "A" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at multiplier4bit.vhd(34): signal "A" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at multiplier4bit.vhd(35): signal "TempB" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at multiplier4bit.vhd(39): signal "Sum" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (13024): Output pins are stuck at VCC or GND
+    Warning (13410): Pin "pin_name1" is stuck at VCC
+    Warning (13410): Pin "RESULT[7]" is stuck at GND
+    Warning (13410): Pin "RESULT[6]" is stuck at GND
+    Warning (13410): Pin "RESULT[5]" is stuck at GND
+    Warning (13410): Pin "RESULT[4]" is stuck at GND
+    Warning (13410): Pin "RESULT[3]" is stuck at GND
+    Warning (13410): Pin "RESULT[2]" is stuck at GND
+    Warning (13410): Pin "RESULT[1]" is stuck at GND
+    Warning (13410): Pin "RESULT[0]" is stuck at GND
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Warning (21074): Design contains 9 input pin(s) that do not drive logic
+    Warning (15610): No output dependent on input pin "B[3]"
+    Warning (15610): No output dependent on input pin "B[2]"
+    Warning (15610): No output dependent on input pin "B[1]"
+    Warning (15610): No output dependent on input pin "B[0]"
+    Warning (15610): No output dependent on input pin "CTRL"
+    Warning (15610): No output dependent on input pin "A[0]"
+    Warning (15610): No output dependent on input pin "A[3]"
+    Warning (15610): No output dependent on input pin "A[2]"
+    Warning (15610): No output dependent on input pin "A[1]"
+Info (21057): Implemented 18 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 9 input pins
+    Info (21059): Implemented 9 output pins
+Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 27 warnings
+    Info: Peak virtual memory: 4635 megabytes
+    Info: Processing ended: Tue Oct 15 17:38:58 2024
+    Info: Elapsed time: 00:00:03
+    Info: Total CPU time (on all processors): 00:00:01
 
 

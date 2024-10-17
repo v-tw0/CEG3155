@@ -1,0 +1,147 @@
+m255
+K3
+13
+cModel Technology
+dD:\Program Files\altera\13.0sp1
+Eaddsub4bit
+Z0 w1729122548
+Z1 DPx3 std 6 textio 0 22 5>J:;AW>W0[[dW0I6EN1Q0
+Z2 DPx4 ieee 14 std_logic_1164 0 22 5=aWaoGZSMWIcH0i^f`XF1
+Z3 dH:\CEG3155\Lab 2\modelsim
+Z4 8H:/CEG3155/Lab 2/addSub4bit.vhd
+Z5 FH:/CEG3155/Lab 2/addSub4bit.vhd
+l0
+L4
+VYmGmoTz?5`AXdf6aa;RVB1
+Z6 OV;C;10.1d;51
+32
+Z7 !s108 1729178891.747000
+Z8 !s90 -reportprogress|300|-work|work|-2002|-explicit|H:/CEG3155/Lab 2/addSub4bit.vhd|
+Z9 !s107 H:/CEG3155/Lab 2/addSub4bit.vhd|
+Z10 o-work work -2002 -explicit -O0
+Z11 tExplicit 1
+!s100 HfgQHdO6zT^AR;63IAUR>1
+!i10b 1
+Artl
+R1
+R2
+DEx4 work 10 addsub4bit 0 22 YmGmoTz?5`AXdf6aa;RVB1
+l25
+L13
+VfAFOU=k0F_3`]WACWU4zL2
+R6
+32
+R7
+R8
+R9
+R10
+R11
+!s100 ]BML6=fSP3^liNOMOfA:o2
+!i10b 1
+Emux4to1
+Z12 w1729123082
+R1
+R2
+R3
+Z13 8H:/CEG3155/Lab 2/mux4to1.vhd
+Z14 FH:/CEG3155/Lab 2/mux4to1.vhd
+l0
+L4
+VC0Mc:dQ_;_81F]g]=a1TG3
+R6
+32
+Z15 !s108 1729178891.999000
+Z16 !s90 -reportprogress|300|-work|work|-2002|-explicit|H:/CEG3155/Lab 2/mux4to1.vhd|
+Z17 !s107 H:/CEG3155/Lab 2/mux4to1.vhd|
+R10
+R11
+!s100 lg4YO:X2]`]PlaM[oHG0d2
+!i10b 1
+Abehaviour
+R1
+R2
+DEx4 work 7 mux4to1 0 22 C0Mc:dQ_;_81F]g]=a1TG3
+l14
+L13
+Vl?;>GhZdRU[GB5PBeXQ[L3
+R6
+32
+R15
+R16
+R17
+R10
+R11
+!s100 ?`NIDKXYg<`2ImgQTAlBA2
+!i10b 1
+Eonebitadder
+Z18 w1728356750
+R1
+R2
+R3
+Z19 8H:/CEG3155/Lab 2/oneBitAdder.vhd
+Z20 FH:/CEG3155/Lab 2/oneBitAdder.vhd
+l0
+L4
+V<WPaMLJ_Q??nLET?Qn5W02
+R6
+32
+Z21 !s108 1729178892.244000
+Z22 !s90 -reportprogress|300|-work|work|-2002|-explicit|H:/CEG3155/Lab 2/oneBitAdder.vhd|
+Z23 !s107 H:/CEG3155/Lab 2/oneBitAdder.vhd|
+R10
+R11
+!s100 HUXTb;m7mnIkjhgz]dcP?1
+!i10b 1
+Artl
+R1
+R2
+DEx4 work 11 onebitadder 0 22 <WPaMLJ_Q??nLET?Qn5W02
+l13
+L12
+V@J3?mbf=6d[f7[LzN7h`<3
+!s100 RUkD<;[KgAEbIk@;LgZB>0
+R6
+32
+R21
+R22
+R23
+R10
+R11
+!i10b 1
+Etb_addsub4bit
+Z24 w1729178826
+Z25 DPx4 ieee 11 numeric_std 0 22 O3PF8EB`?j9=z7KT`fn941
+R1
+R2
+R3
+Z26 8H:/CEG3155/Lab 2/modelsim/addSub4bit_tb.vhd
+Z27 FH:/CEG3155/Lab 2/modelsim/addSub4bit_tb.vhd
+l0
+L5
+Ve`;8BP6U:_jM1[J=n=4?A0
+!s100 :^`C`DgZj_@:2HRob<HAR2
+R6
+32
+!i10b 1
+Z28 !s108 1729178892.498000
+Z29 !s90 -reportprogress|300|-work|work|-2002|-explicit|H:/CEG3155/Lab 2/modelsim/addSub4bit_tb.vhd|
+Z30 !s107 H:/CEG3155/Lab 2/modelsim/addSub4bit_tb.vhd|
+R10
+R11
+Abehavior
+R25
+R1
+R2
+DEx4 work 13 tb_addsub4bit 0 22 e`;8BP6U:_jM1[J=n=4?A0
+l32
+L8
+VISD7dj05GnDoO03^AmEBP1
+!s100 >l0h:G5SV59<Nc38oT2SN3
+R6
+32
+!i10b 1
+R28
+R29
+R30
+R10
+R11
