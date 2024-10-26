@@ -47,6 +47,30 @@ set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_RO
 set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
 set_global_assignment -name MIN_CORE_JUNCTION_TEMP 0
 set_global_assignment -name MAX_CORE_JUNCTION_TEMP 85
+set_global_assignment -name POWER_PRESET_COOLING_SOLUTION "23 MM HEAT SINK WITH 200 LFPM AIRFLOW"
+set_global_assignment -name POWER_BOARD_THERMAL_MODEL "NONE (CONSERVATIVE)"
+set_global_assignment -name INCREMENTAL_VECTOR_INPUT_SOURCE "Y:/CEG3155/Lab 2/TestAddSub.vwf"
+set_global_assignment -name SIMULATION_MODE FUNCTIONAL
+set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top
+set_global_assignment -name VHDL_FILE Divider/xor2bit.vhd
+set_global_assignment -name VHDL_FILE Divider/xnor2bit.vhd
+set_global_assignment -name BDF_FILE Divider/testADDER.bdf
+set_global_assignment -name VHDL_FILE Divider/shiftReg8bit.vhd
+set_global_assignment -name VHDL_FILE Divider/shiftReg4bit.vhd
+set_global_assignment -name VHDL_FILE Divider/register4bit.vhd
+set_global_assignment -name VHDL_FILE Divider/or2bit.vhd
+set_global_assignment -name BDF_FILE Divider/lab2testDATAPATH.bdf
+set_global_assignment -name BDF_FILE Divider/fullDivider.bdf
+set_global_assignment -name VHDL_FILE Divider/fullAdder.vhd
+set_global_assignment -name BDF_FILE Divider/datapath.bdf
+set_global_assignment -name VHDL_FILE Divider/countDown4.vhd
+set_global_assignment -name BDF_FILE Divider/controlpath.bdf
+set_global_assignment -name VHDL_FILE Divider/comparator1bit.vhd
+set_global_assignment -name VHDL_FILE Divider/comp4bit.vhd
+set_global_assignment -name VHDL_FILE Divider/and5bit.vhd
+set_global_assignment -name VHDL_FILE Divider/and3bit.vhd
+set_global_assignment -name VHDL_FILE Divider/and2bit.vhd
+set_global_assignment -name VHDL_FILE Divider/addSub4bit.vhd
 set_global_assignment -name VHDL_FILE Multiplier/xor2bit.vhd
 set_global_assignment -name VHDL_FILE Multiplier/threebitcomparator.vhd
 set_global_assignment -name VHDL_FILE Multiplier/shiftReg8bit.vhd
@@ -67,8 +91,3 @@ set_global_assignment -name BDF_FILE lab2.bdf
 set_global_assignment -name VHDL_FILE mux4to1.vhd
 set_global_assignment -name VHDL_FILE oneBitAdder.vhd
 set_global_assignment -name VHDL_FILE addSub4bit.vhd
-set_global_assignment -name POWER_PRESET_COOLING_SOLUTION "23 MM HEAT SINK WITH 200 LFPM AIRFLOW"
-set_global_assignment -name POWER_BOARD_THERMAL_MODEL "NONE (CONSERVATIVE)"
-set_global_assignment -name INCREMENTAL_VECTOR_INPUT_SOURCE "Y:/CEG3155/Lab 2/TestAddSub.vwf"
-set_global_assignment -name SIMULATION_MODE FUNCTIONAL
-set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top
