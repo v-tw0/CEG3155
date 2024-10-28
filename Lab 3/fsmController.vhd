@@ -4,7 +4,7 @@ use ieee.std_logic_1164.all;
 entity fsmController is
 	port(
 	i_SSCS ,i_clk, i_resetbar, i_MSC, i_SSC : in STD_LOGIC;
-	MSTL, SSTL: out STD_LOGIC_VECTOR (2 downto 0);
+	o_MSTL, o_SSTL: out STD_LOGIC_VECTOR (2 downto 0);
 	counterReset: out STD_LOGIC);
 end fsmController;
 
@@ -39,12 +39,12 @@ begin
 
 	bigY1 <= y0;
 	bigY0 <= (i_SSCS AND y1_prime) OR (y1_prime AND y0);
-	MSTL(2) <= y1;
-	MSTL(1) <= y1_prime AND y0;
-	MSTL(0) <= y1_prime AND y0_prime;
-	SSTL(2) <= y1_prime;
-	SSTL(1) <= y1 AND y0_prime;
-	SSTL(0) <= y1 AND y0;
+	o_MSTL(2) <= y1;
+	o_MSTL(1) <= y1_prime AND y0;
+	o_MSTL(0) <= y1_prime AND y0_prime;
+	o_SSTL(2) <= y1_prime;
+	o_SSTL(1) <= y1 AND y0_prime;
+	o_SSTL(0) <= y1 AND y0;
 	enable  <= (i_MSC AND i_SSCS AND y0_prime AND y1_prime) OR (y0 AND y1_prime AND i_MSC) OR (y0 AND y1 AND i_SSC) OR (y0_prime AND y1 AND i_SSC);
 
 	counterReset <= enable;
