@@ -1,0 +1,1276 @@
+Analysis & Synthesis report for project
+Sat Nov 02 17:17:33 2024
+Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Parallel Compilation
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. General Register Statistics
+  9. Parameter Settings for User Entity Instance: UART:inst11|UARTBaudRateGenerator:instUARTBaudRateGenerator|ClockDivider:instClockDivider
+ 10. Parameter Settings for User Entity Instance: UART:inst11|UARTBaudRateGenerator:instUARTBaudRateGenerator|MUX8:instMUX8
+ 11. Parameter Settings for User Entity Instance: UART:inst11|ClockDivider:inst
+ 12. Parameter Settings for User Entity Instance: UART:inst11|PackedRegister:SCCR
+ 13. Parameter Settings for User Entity Instance: UART:inst11|MUX8:Bus
+ 14. Parameter Settings for User Entity Instance: UART:inst11|PackedRegister:RDR
+ 15. Parameter Settings for User Entity Instance: UART:inst11|ShiftRegister8:RSR|MUX4:\generateMUX:7:MUX4Inst
+ 16. Parameter Settings for User Entity Instance: UART:inst11|ShiftRegister8:RSR|MUX4:\generateMUX:6:MUX4Inst
+ 17. Parameter Settings for User Entity Instance: UART:inst11|ShiftRegister8:RSR|MUX4:\generateMUX:5:MUX4Inst
+ 18. Parameter Settings for User Entity Instance: UART:inst11|ShiftRegister8:RSR|MUX4:\generateMUX:4:MUX4Inst
+ 19. Parameter Settings for User Entity Instance: UART:inst11|ShiftRegister8:RSR|MUX4:\generateMUX:3:MUX4Inst
+ 20. Parameter Settings for User Entity Instance: UART:inst11|ShiftRegister8:RSR|MUX4:\generateMUX:2:MUX4Inst
+ 21. Parameter Settings for User Entity Instance: UART:inst11|ShiftRegister8:RSR|MUX4:\generateMUX:1:MUX4Inst
+ 22. Parameter Settings for User Entity Instance: UART:inst11|ShiftRegister8:RSR|MUX4:\generateMUX:0:MUX4Inst
+ 23. Parameter Settings for User Entity Instance: UART:inst11|PackedRegister:SCSR
+ 24. Parameter Settings for User Entity Instance: UART:inst11|ShiftRegister8:TSR|MUX4:\generateMUX:7:MUX4Inst
+ 25. Parameter Settings for User Entity Instance: UART:inst11|ShiftRegister8:TSR|MUX4:\generateMUX:6:MUX4Inst
+ 26. Parameter Settings for User Entity Instance: UART:inst11|ShiftRegister8:TSR|MUX4:\generateMUX:5:MUX4Inst
+ 27. Parameter Settings for User Entity Instance: UART:inst11|ShiftRegister8:TSR|MUX4:\generateMUX:4:MUX4Inst
+ 28. Parameter Settings for User Entity Instance: UART:inst11|ShiftRegister8:TSR|MUX4:\generateMUX:3:MUX4Inst
+ 29. Parameter Settings for User Entity Instance: UART:inst11|ShiftRegister8:TSR|MUX4:\generateMUX:2:MUX4Inst
+ 30. Parameter Settings for User Entity Instance: UART:inst11|ShiftRegister8:TSR|MUX4:\generateMUX:1:MUX4Inst
+ 31. Parameter Settings for User Entity Instance: UART:inst11|ShiftRegister8:TSR|MUX4:\generateMUX:0:MUX4Inst
+ 32. Parameter Settings for User Entity Instance: UART:inst11|PackedRegister:TDR
+ 33. Port Connectivity Checks: "UART:inst11|UARTTransmitterController:instUARTTransmitterController|Counter16D:CTR"
+ 34. Port Connectivity Checks: "UART:inst11|UARTTransmitterController:instUARTTransmitterController|enARdFF_2:\generateDFF:0:dffInst"
+ 35. Port Connectivity Checks: "UART:inst11|UARTTransmitterController:instUARTTransmitterController|enARdFF_2:\generateDFF:1:dffInst"
+ 36. Port Connectivity Checks: "UART:inst11|ShiftRegister8:RSR|enARdFF_2:\generateDFF:0:DFFInst"
+ 37. Port Connectivity Checks: "UART:inst11|ShiftRegister8:RSR|enARdFF_2:\generateDFF:1:DFFInst"
+ 38. Port Connectivity Checks: "UART:inst11|ShiftRegister8:RSR|enARdFF_2:\generateDFF:2:DFFInst"
+ 39. Port Connectivity Checks: "UART:inst11|ShiftRegister8:RSR|enARdFF_2:\generateDFF:3:DFFInst"
+ 40. Port Connectivity Checks: "UART:inst11|ShiftRegister8:RSR|enARdFF_2:\generateDFF:4:DFFInst"
+ 41. Port Connectivity Checks: "UART:inst11|ShiftRegister8:RSR|enARdFF_2:\generateDFF:5:DFFInst"
+ 42. Port Connectivity Checks: "UART:inst11|ShiftRegister8:RSR|enARdFF_2:\generateDFF:6:DFFInst"
+ 43. Port Connectivity Checks: "UART:inst11|ShiftRegister8:RSR|enARdFF_2:\generateDFF:7:DFFInst"
+ 44. Port Connectivity Checks: "UART:inst11|UARTReceiverController:instIUARTReceiverController|Counter16D:CTR1"
+ 45. Port Connectivity Checks: "UART:inst11|UARTReceiverController:instIUARTReceiverController|Counter16D:CTR0|enARdFF_2:\generateDFF:0:dffInst"
+ 46. Port Connectivity Checks: "UART:inst11|UARTReceiverController:instIUARTReceiverController|Counter16D:CTR0|enARdFF_2:\generateDFF:1:dffInst"
+ 47. Port Connectivity Checks: "UART:inst11|UARTReceiverController:instIUARTReceiverController|Counter16D:CTR0|enARdFF_2:\generateDFF:2:dffInst"
+ 48. Port Connectivity Checks: "UART:inst11|UARTReceiverController:instIUARTReceiverController|Counter16D:CTR0|enARdFF_2:\generateDFF:3:dffInst"
+ 49. Port Connectivity Checks: "UART:inst11|UARTReceiverController:instIUARTReceiverController|Counter16D:CTR0"
+ 50. Port Connectivity Checks: "UART:inst11|UARTReceiverController:instIUARTReceiverController|enARdFF_2:\generateDFF:0:dffInst"
+ 51. Port Connectivity Checks: "UART:inst11|UARTReceiverController:instIUARTReceiverController|enARdFF_2:\generateDFF:1:dffInst"
+ 52. Port Connectivity Checks: "UART:inst11|UARTReceiverController:instIUARTReceiverController|enARdFF_2:\generateDFF:2:dffInst"
+ 53. Port Connectivity Checks: "UART:inst11|UARTReceiverController:instIUARTReceiverController|enARdFF_2:\generateDFF:3:dffInst"
+ 54. Port Connectivity Checks: "UART:inst11|PackedRegister:SCCR|enARdFF_2:\generateDFF:0:DFFInst"
+ 55. Port Connectivity Checks: "UART:inst11|PackedRegister:SCCR|enARdFF_2:\generateDFF:1:DFFInst"
+ 56. Port Connectivity Checks: "UART:inst11|PackedRegister:SCCR|enARdFF_2:\generateDFF:2:DFFInst"
+ 57. Port Connectivity Checks: "UART:inst11|PackedRegister:SCCR|enARdFF_2:\generateDFF:3:DFFInst"
+ 58. Port Connectivity Checks: "UART:inst11|PackedRegister:SCCR|enARdFF_2:\generateDFF:4:DFFInst"
+ 59. Port Connectivity Checks: "UART:inst11|PackedRegister:SCCR|enARdFF_2:\generateDFF:5:DFFInst"
+ 60. Port Connectivity Checks: "UART:inst11|PackedRegister:SCCR|enARdFF_2:\generateDFF:6:DFFInst"
+ 61. Port Connectivity Checks: "UART:inst11|PackedRegister:SCCR|enARdFF_2:\generateDFF:7:DFFInst"
+ 62. Port Connectivity Checks: "UART:inst11|UARTBaudRateGenerator:instUARTBaudRateGenerator|Counter8:instCounter8Divider|enARdFF_2:\generateDFF:0:dffInst"
+ 63. Port Connectivity Checks: "UART:inst11|UARTBaudRateGenerator:instUARTBaudRateGenerator|Counter8:instCounter8Divider|enARdFF_2:\generateDFF:1:dffInst"
+ 64. Port Connectivity Checks: "UART:inst11|UARTBaudRateGenerator:instUARTBaudRateGenerator|Counter8:instCounter8Divider|enARdFF_2:\generateDFF:2:dffInst"
+ 65. Port Connectivity Checks: "UART:inst11|UARTBaudRateGenerator:instUARTBaudRateGenerator|Counter8:instCounter8Divider"
+ 66. Port Connectivity Checks: "UART:inst11|UARTBaudRateGenerator:instUARTBaudRateGenerator|Counter256:instCounter256|enARdFF_2:\generateDFF:0:dffInst"
+ 67. Port Connectivity Checks: "UART:inst11|UARTBaudRateGenerator:instUARTBaudRateGenerator|Counter256:instCounter256|enARdFF_2:\generateDFF:1:dffInst"
+ 68. Port Connectivity Checks: "UART:inst11|UARTBaudRateGenerator:instUARTBaudRateGenerator|Counter256:instCounter256|enARdFF_2:\generateDFF:2:dffInst"
+ 69. Port Connectivity Checks: "UART:inst11|UARTBaudRateGenerator:instUARTBaudRateGenerator|Counter256:instCounter256|enARdFF_2:\generateDFF:3:dffInst"
+ 70. Port Connectivity Checks: "UART:inst11|UARTBaudRateGenerator:instUARTBaudRateGenerator|Counter256:instCounter256|enARdFF_2:\generateDFF:4:dffInst"
+ 71. Port Connectivity Checks: "UART:inst11|UARTBaudRateGenerator:instUARTBaudRateGenerator|Counter256:instCounter256|enARdFF_2:\generateDFF:5:dffInst"
+ 72. Port Connectivity Checks: "UART:inst11|UARTBaudRateGenerator:instUARTBaudRateGenerator|Counter256:instCounter256|enARdFF_2:\generateDFF:6:dffInst"
+ 73. Port Connectivity Checks: "UART:inst11|UARTBaudRateGenerator:instUARTBaudRateGenerator|Counter256:instCounter256|enARdFF_2:\generateDFF:7:dffInst"
+ 74. Port Connectivity Checks: "UART:inst11|UARTBaudRateGenerator:instUARTBaudRateGenerator|Counter256:instCounter256"
+ 75. Port Connectivity Checks: "lab3:inst|counterJK4bit:inst1|jkFF_2:jk3"
+ 76. Port Connectivity Checks: "lab3:inst|counterJK4bit:inst1|jkFF_2:jk2"
+ 77. Port Connectivity Checks: "lab3:inst|counterJK4bit:inst1|jkFF_2:jk1"
+ 78. Port Connectivity Checks: "lab3:inst|counterJK4bit:inst1|jkFF_2:jk0"
+ 79. Port Connectivity Checks: "lab3:inst|debouncer_2:cleanSSCS|enARdFF_2:second"
+ 80. Port Connectivity Checks: "lab3:inst|debouncer_2:cleanSSCS|enARdFF_2:first"
+ 81. Port Connectivity Checks: "lab3:inst|fsmController:inst89|enARdFF_2:ffy1"
+ 82. Port Connectivity Checks: "lab3:inst|fsmController:inst89|enARdFF_2:ffy0"
+ 83. Elapsed Time Per Partition
+ 84. Analysis & Synthesis Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2013 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++--------------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                         ;
++------------------------------------+-------------------------------------------------+
+; Analysis & Synthesis Status        ; Successful - Sat Nov 02 17:17:33 2024           ;
+; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
+; Revision Name                      ; project                                         ;
+; Top-level Entity Name              ; toplevelProject                                 ;
+; Family                             ; Cyclone IV E                                    ;
+; Total logic elements               ; 38                                              ;
+;     Total combinational functions  ; 37                                              ;
+;     Dedicated logic registers      ; 19                                              ;
+; Total registers                    ; 19                                              ;
+; Total pins                         ; 27                                              ;
+; Total virtual pins                 ; 0                                               ;
+; Total memory bits                  ; 0                                               ;
+; Embedded Multiplier 9-bit elements ; 0                                               ;
+; Total PLLs                         ; 0                                               ;
++------------------------------------+-------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                                        ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+; Option                                                                     ; Setting            ; Default Value      ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+; Device                                                                     ; EP4CE115F29C7      ;                    ;
+; Top-level entity name                                                      ; toplevelProject    ; project            ;
+; Family name                                                                ; Cyclone IV E       ; Cyclone IV GX      ;
+; Use smart compilation                                                      ; Off                ; Off                ;
+; Enable parallel Assembler and TimeQuest Timing Analyzer during compilation ; On                 ; On                 ;
+; Enable compact report table                                                ; Off                ; Off                ;
+; Restructure Multiplexers                                                   ; Auto               ; Auto               ;
+; Create Debugging Nodes for IP Cores                                        ; Off                ; Off                ;
+; Preserve fewer node names                                                  ; On                 ; On                 ;
+; Disable OpenCore Plus hardware evaluation                                  ; Off                ; Off                ;
+; Verilog Version                                                            ; Verilog_2001       ; Verilog_2001       ;
+; VHDL Version                                                               ; VHDL_1993          ; VHDL_1993          ;
+; State Machine Processing                                                   ; Auto               ; Auto               ;
+; Safe State Machine                                                         ; Off                ; Off                ;
+; Extract Verilog State Machines                                             ; On                 ; On                 ;
+; Extract VHDL State Machines                                                ; On                 ; On                 ;
+; Ignore Verilog initial constructs                                          ; Off                ; Off                ;
+; Iteration limit for constant Verilog loops                                 ; 5000               ; 5000               ;
+; Iteration limit for non-constant Verilog loops                             ; 250                ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                                    ; On                 ; On                 ;
+; Infer RAMs from Raw Logic                                                  ; On                 ; On                 ;
+; Parallel Synthesis                                                         ; On                 ; On                 ;
+; DSP Block Balancing                                                        ; Auto               ; Auto               ;
+; NOT Gate Push-Back                                                         ; On                 ; On                 ;
+; Power-Up Don't Care                                                        ; On                 ; On                 ;
+; Remove Redundant Logic Cells                                               ; Off                ; Off                ;
+; Remove Duplicate Registers                                                 ; On                 ; On                 ;
+; Ignore CARRY Buffers                                                       ; Off                ; Off                ;
+; Ignore CASCADE Buffers                                                     ; Off                ; Off                ;
+; Ignore GLOBAL Buffers                                                      ; Off                ; Off                ;
+; Ignore ROW GLOBAL Buffers                                                  ; Off                ; Off                ;
+; Ignore LCELL Buffers                                                       ; Off                ; Off                ;
+; Ignore SOFT Buffers                                                        ; On                 ; On                 ;
+; Limit AHDL Integers to 32 Bits                                             ; Off                ; Off                ;
+; Optimization Technique                                                     ; Balanced           ; Balanced           ;
+; Carry Chain Length                                                         ; 70                 ; 70                 ;
+; Auto Carry Chains                                                          ; On                 ; On                 ;
+; Auto Open-Drain Pins                                                       ; On                 ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                                      ; Off                ; Off                ;
+; Auto ROM Replacement                                                       ; On                 ; On                 ;
+; Auto RAM Replacement                                                       ; On                 ; On                 ;
+; Auto DSP Block Replacement                                                 ; On                 ; On                 ;
+; Auto Shift Register Replacement                                            ; Auto               ; Auto               ;
+; Allow Shift Register Merging across Hierarchies                            ; Auto               ; Auto               ;
+; Auto Clock Enable Replacement                                              ; On                 ; On                 ;
+; Strict RAM Replacement                                                     ; Off                ; Off                ;
+; Allow Synchronous Control Signals                                          ; On                 ; On                 ;
+; Force Use of Synchronous Clear Signals                                     ; Off                ; Off                ;
+; Auto RAM Block Balancing                                                   ; On                 ; On                 ;
+; Auto RAM to Logic Cell Conversion                                          ; Off                ; Off                ;
+; Auto Resource Sharing                                                      ; Off                ; Off                ;
+; Allow Any RAM Size For Recognition                                         ; Off                ; Off                ;
+; Allow Any ROM Size For Recognition                                         ; Off                ; Off                ;
+; Allow Any Shift Register Size For Recognition                              ; Off                ; Off                ;
+; Use LogicLock Constraints during Resource Balancing                        ; On                 ; On                 ;
+; Ignore translate_off and synthesis_off directives                          ; Off                ; Off                ;
+; Timing-Driven Synthesis                                                    ; On                 ; On                 ;
+; Report Parameter Settings                                                  ; On                 ; On                 ;
+; Report Source Assignments                                                  ; On                 ; On                 ;
+; Report Connectivity Checks                                                 ; On                 ; On                 ;
+; Ignore Maximum Fan-Out Assignments                                         ; Off                ; Off                ;
+; Synchronization Register Chain Length                                      ; 2                  ; 2                  ;
+; PowerPlay Power Optimization                                               ; Normal compilation ; Normal compilation ;
+; HDL message level                                                          ; Level2             ; Level2             ;
+; Suppress Register Optimization Related Messages                            ; Off                ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report                   ; 5000               ; 5000               ;
+; Number of Swept Nodes Reported in Synthesis Report                         ; 5000               ; 5000               ;
+; Number of Inverted Registers Reported in Synthesis Report                  ; 100                ; 100                ;
+; Clock MUX Protection                                                       ; On                 ; On                 ;
+; Auto Gated Clock Conversion                                                ; Off                ; Off                ;
+; Block Design Naming                                                        ; Auto               ; Auto               ;
+; SDC constraint protection                                                  ; Off                ; Off                ;
+; Synthesis Effort                                                           ; Auto               ; Auto               ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal               ; On                 ; On                 ;
+; Pre-Mapping Resynthesis Optimization                                       ; Off                ; Off                ;
+; Analysis & Synthesis Message Level                                         ; Medium             ; Medium             ;
+; Disable Register Merging Across Hierarchies                                ; Auto               ; Auto               ;
+; Resource Aware Inference For Block RAM                                     ; On                 ; On                 ;
+; Synthesis Seed                                                             ; 1                  ; 1                  ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 16          ;
+; Maximum allowed            ; 16          ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 1           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
+;     Processors 2-16        ;   0.0%      ;
++----------------------------+-------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                     ;
++----------------------------------+-----------------+------------------------------------+--------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                          ; File Name with Absolute Path                           ; Library ;
++----------------------------------+-----------------+------------------------------------+--------------------------------------------------------+---------+
+; MUX8.vhd                         ; yes             ; User VHDL File                     ; G:/Desktop/Final Project/MUX8.vhd                      ;         ;
+; Counter8.vhd                     ; yes             ; User VHDL File                     ; G:/Desktop/Final Project/Counter8.vhd                  ;         ;
+; Counter256.vhd                   ; yes             ; User VHDL File                     ; G:/Desktop/Final Project/Counter256.vhd                ;         ;
+; ClockDivider.vhd                 ; yes             ; User VHDL File                     ; G:/Desktop/Final Project/ClockDivider.vhd              ;         ;
+; UART.bdf                         ; yes             ; User Block Diagram/Schematic File  ; G:/Desktop/Final Project/UART.bdf                      ;         ;
+; UARTFSM.vhd                      ; yes             ; User VHDL File                     ; G:/Desktop/Final Project/UARTFSM.vhd                   ;         ;
+; UARTBaudRateGenerator.vhd        ; yes             ; User VHDL File                     ; G:/Desktop/Final Project/UARTBaudRateGenerator.vhd     ;         ;
+; ShiftRegister8.vhd               ; yes             ; User VHDL File                     ; G:/Desktop/Final Project/ShiftRegister8.vhd            ;         ;
+; PackedRegister.vhd               ; yes             ; User VHDL File                     ; G:/Desktop/Final Project/PackedRegister.vhd            ;         ;
+; lab3.bdf                         ; yes             ; User Block Diagram/Schematic File  ; G:/Desktop/Final Project/lab3.bdf                      ;         ;
+; jkFF_2.vhd                       ; yes             ; User VHDL File                     ; G:/Desktop/Final Project/jkFF_2.vhd                    ;         ;
+; fsmController.vhd                ; yes             ; User VHDL File                     ; G:/Desktop/Final Project/fsmController.vhd             ;         ;
+; enardFF_2.vhd                    ; yes             ; User VHDL File                     ; G:/Desktop/Final Project/enardFF_2.vhd                 ;         ;
+; dFF_2.vhd                        ; yes             ; User VHDL File                     ; G:/Desktop/Final Project/dFF_2.vhd                     ;         ;
+; debouncer_2.vhd                  ; yes             ; User VHDL File                     ; G:/Desktop/Final Project/debouncer_2.vhd               ;         ;
+; counterJK4bit.vhd                ; yes             ; User VHDL File                     ; G:/Desktop/Final Project/counterJK4bit.vhd             ;         ;
+; comparator4bit.vhd               ; yes             ; User VHDL File                     ; G:/Desktop/Final Project/comparator4bit.vhd            ;         ;
+; clk_div.vhd                      ; yes             ; User VHDL File                     ; G:/Desktop/Final Project/clk_div.vhd                   ;         ;
+; toplevelProject.bdf              ; yes             ; User Block Diagram/Schematic File  ; G:/Desktop/Final Project/toplevelProject.bdf           ;         ;
+; decoder4.vhd                     ; yes             ; Auto-Found VHDL File               ; G:/Desktop/Final Project/decoder4.vhd                  ;         ;
+; uartreceivercontroller.vhd       ; yes             ; Auto-Found VHDL File               ; G:/Desktop/Final Project/uartreceivercontroller.vhd    ;         ;
+; counter16d.vhd                   ; yes             ; Auto-Found VHDL File               ; G:/Desktop/Final Project/counter16d.vhd                ;         ;
+; mux4.vhd                         ; yes             ; Auto-Found VHDL File               ; G:/Desktop/Final Project/mux4.vhd                      ;         ;
+; uarttransmittercontroller.vhd    ; yes             ; Auto-Found VHDL File               ; G:/Desktop/Final Project/uarttransmittercontroller.vhd ;         ;
++----------------------------------+-----------------+------------------------------------+--------------------------------------------------------+---------+
+
+
++---------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary                                                       ;
++---------------------------------------------+-----------------------------------------------------+
+; Resource                                    ; Usage                                               ;
++---------------------------------------------+-----------------------------------------------------+
+; Estimated Total logic elements              ; 38                                                  ;
+;                                             ;                                                     ;
+; Total combinational functions               ; 37                                                  ;
+; Logic element usage by number of LUT inputs ;                                                     ;
+;     -- 4 input functions                    ; 13                                                  ;
+;     -- 3 input functions                    ; 13                                                  ;
+;     -- <=2 input functions                  ; 11                                                  ;
+;                                             ;                                                     ;
+; Logic elements by mode                      ;                                                     ;
+;     -- normal mode                          ; 33                                                  ;
+;     -- arithmetic mode                      ; 4                                                   ;
+;                                             ;                                                     ;
+; Total registers                             ; 19                                                  ;
+;     -- Dedicated logic registers            ; 19                                                  ;
+;     -- I/O registers                        ; 0                                                   ;
+;                                             ;                                                     ;
+; I/O pins                                    ; 27                                                  ;
+; Embedded Multiplier 9-bit elements          ; 0                                                   ;
+; Maximum fan-out node                        ; lab3:inst|fsmController:inst89|enARdFF_2:ffy1|int_q ;
+; Maximum fan-out                             ; 18                                                  ;
+; Total fan-out                               ; 192                                                 ;
+; Average fan-out                             ; 1.75                                                ;
++---------------------------------------------+-----------------------------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                  ;
++-------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------------------------------------------------------------+--------------+
+; Compilation Hierarchy Node    ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                       ; Library Name ;
++-------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------------------------------------------------------------+--------------+
+; |toplevelProject              ; 37 (0)            ; 19 (0)       ; 0           ; 0            ; 0       ; 0         ; 27   ; 0            ; |toplevelProject                                                          ; work         ;
+;    |clk_div:inst2|            ; 7 (7)             ; 7 (7)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |toplevelProject|clk_div:inst2                                            ; work         ;
+;    |lab3:inst|                ; 30 (1)            ; 12 (0)       ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |toplevelProject|lab3:inst                                                ; work         ;
+;       |comparator4bit:inst4|  ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |toplevelProject|lab3:inst|comparator4bit:inst4                           ; work         ;
+;       |comparator4bit:inst5|  ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |toplevelProject|lab3:inst|comparator4bit:inst5                           ; work         ;
+;       |counterJK4bit:inst1|   ; 5 (0)             ; 4 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |toplevelProject|lab3:inst|counterJK4bit:inst1                            ; work         ;
+;          |jkFF_2:jk0|         ; 1 (0)             ; 1 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |toplevelProject|lab3:inst|counterJK4bit:inst1|jkFF_2:jk0                 ; work         ;
+;             |dFF_2:dFlipFlop| ; 1 (1)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |toplevelProject|lab3:inst|counterJK4bit:inst1|jkFF_2:jk0|dFF_2:dFlipFlop ; work         ;
+;          |jkFF_2:jk1|         ; 1 (0)             ; 1 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |toplevelProject|lab3:inst|counterJK4bit:inst1|jkFF_2:jk1                 ; work         ;
+;             |dFF_2:dFlipFlop| ; 1 (1)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |toplevelProject|lab3:inst|counterJK4bit:inst1|jkFF_2:jk1|dFF_2:dFlipFlop ; work         ;
+;          |jkFF_2:jk2|         ; 2 (0)             ; 1 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |toplevelProject|lab3:inst|counterJK4bit:inst1|jkFF_2:jk2                 ; work         ;
+;             |dFF_2:dFlipFlop| ; 2 (2)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |toplevelProject|lab3:inst|counterJK4bit:inst1|jkFF_2:jk2|dFF_2:dFlipFlop ; work         ;
+;          |jkFF_2:jk3|         ; 1 (0)             ; 1 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |toplevelProject|lab3:inst|counterJK4bit:inst1|jkFF_2:jk3                 ; work         ;
+;             |dFF_2:dFlipFlop| ; 1 (1)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |toplevelProject|lab3:inst|counterJK4bit:inst1|jkFF_2:jk3|dFF_2:dFlipFlop ; work         ;
+;       |counterJK4bit:inst|    ; 8 (3)             ; 4 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |toplevelProject|lab3:inst|counterJK4bit:inst                             ; work         ;
+;          |jkFF_2:jk0|         ; 1 (0)             ; 1 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |toplevelProject|lab3:inst|counterJK4bit:inst|jkFF_2:jk0                  ; work         ;
+;             |dFF_2:dFlipFlop| ; 1 (1)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |toplevelProject|lab3:inst|counterJK4bit:inst|jkFF_2:jk0|dFF_2:dFlipFlop  ; work         ;
+;          |jkFF_2:jk1|         ; 1 (0)             ; 1 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |toplevelProject|lab3:inst|counterJK4bit:inst|jkFF_2:jk1                  ; work         ;
+;             |dFF_2:dFlipFlop| ; 1 (1)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |toplevelProject|lab3:inst|counterJK4bit:inst|jkFF_2:jk1|dFF_2:dFlipFlop  ; work         ;
+;          |jkFF_2:jk2|         ; 1 (0)             ; 1 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |toplevelProject|lab3:inst|counterJK4bit:inst|jkFF_2:jk2                  ; work         ;
+;             |dFF_2:dFlipFlop| ; 1 (1)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |toplevelProject|lab3:inst|counterJK4bit:inst|jkFF_2:jk2|dFF_2:dFlipFlop  ; work         ;
+;          |jkFF_2:jk3|         ; 2 (1)             ; 1 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |toplevelProject|lab3:inst|counterJK4bit:inst|jkFF_2:jk3                  ; work         ;
+;             |dFF_2:dFlipFlop| ; 1 (1)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |toplevelProject|lab3:inst|counterJK4bit:inst|jkFF_2:jk3|dFF_2:dFlipFlop  ; work         ;
+;       |debouncer_2:cleanSSCS| ; 2 (2)             ; 2 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |toplevelProject|lab3:inst|debouncer_2:cleanSSCS                          ; work         ;
+;          |enARdFF_2:first|    ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |toplevelProject|lab3:inst|debouncer_2:cleanSSCS|enARdFF_2:first          ; work         ;
+;          |enARdFF_2:second|   ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |toplevelProject|lab3:inst|debouncer_2:cleanSSCS|enARdFF_2:second         ; work         ;
+;       |fsmController:inst89|  ; 10 (7)            ; 2 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |toplevelProject|lab3:inst|fsmController:inst89                           ; work         ;
+;          |enARdFF_2:ffy0|     ; 2 (2)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |toplevelProject|lab3:inst|fsmController:inst89|enARdFF_2:ffy0            ; work         ;
+;          |enARdFF_2:ffy1|     ; 1 (1)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |toplevelProject|lab3:inst|fsmController:inst89|enARdFF_2:ffy1            ; work         ;
++-------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------------------------------------------------------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 19    ;
+; Number of registers using Synchronous Clear  ; 5     ;
+; Number of registers using Synchronous Load   ; 0     ;
+; Number of registers using Asynchronous Clear ; 4     ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 0     ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: UART:inst11|UARTBaudRateGenerator:instUARTBaudRateGenerator|ClockDivider:instClockDivider ;
++----------------+-------+---------------------------------------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                                                          ;
++----------------+-------+---------------------------------------------------------------------------------------------------------------+
+; w              ; 6     ; Signed Integer                                                                                                ;
+; n              ; 41    ; Signed Integer                                                                                                ;
++----------------+-------+---------------------------------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: UART:inst11|UARTBaudRateGenerator:instUARTBaudRateGenerator|MUX8:instMUX8 ;
++----------------+-------+-----------------------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                                          ;
++----------------+-------+-----------------------------------------------------------------------------------------------+
+; t              ; 0     ; Signed Integer                                                                                ;
++----------------+-------+-----------------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: UART:inst11|ClockDivider:inst ;
++----------------+-------+---------------------------------------------------+
+; Parameter Name ; Value ; Type                                              ;
++----------------+-------+---------------------------------------------------+
+; W              ; 1     ; Signed Integer                                    ;
+; N              ; 2     ; Signed Integer                                    ;
++----------------+-------+---------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: UART:inst11|PackedRegister:SCCR ;
++----------------+-------+-----------------------------------------------------+
+; Parameter Name ; Value ; Type                                                ;
++----------------+-------+-----------------------------------------------------+
+; t              ; 7     ; Signed Integer                                      ;
++----------------+-------+-----------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: UART:inst11|MUX8:Bus ;
++----------------+-------+------------------------------------------+
+; Parameter Name ; Value ; Type                                     ;
++----------------+-------+------------------------------------------+
+; t              ; 7     ; Signed Integer                           ;
++----------------+-------+------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: UART:inst11|PackedRegister:RDR ;
++----------------+-------+----------------------------------------------------+
+; Parameter Name ; Value ; Type                                               ;
++----------------+-------+----------------------------------------------------+
+; t              ; 7     ; Signed Integer                                     ;
++----------------+-------+----------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: UART:inst11|ShiftRegister8:RSR|MUX4:\generateMUX:7:MUX4Inst ;
++----------------+-------+---------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                            ;
++----------------+-------+---------------------------------------------------------------------------------+
+; t              ; 0     ; Signed Integer                                                                  ;
++----------------+-------+---------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: UART:inst11|ShiftRegister8:RSR|MUX4:\generateMUX:6:MUX4Inst ;
++----------------+-------+---------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                            ;
++----------------+-------+---------------------------------------------------------------------------------+
+; t              ; 0     ; Signed Integer                                                                  ;
++----------------+-------+---------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: UART:inst11|ShiftRegister8:RSR|MUX4:\generateMUX:5:MUX4Inst ;
++----------------+-------+---------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                            ;
++----------------+-------+---------------------------------------------------------------------------------+
+; t              ; 0     ; Signed Integer                                                                  ;
++----------------+-------+---------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: UART:inst11|ShiftRegister8:RSR|MUX4:\generateMUX:4:MUX4Inst ;
++----------------+-------+---------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                            ;
++----------------+-------+---------------------------------------------------------------------------------+
+; t              ; 0     ; Signed Integer                                                                  ;
++----------------+-------+---------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: UART:inst11|ShiftRegister8:RSR|MUX4:\generateMUX:3:MUX4Inst ;
++----------------+-------+---------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                            ;
++----------------+-------+---------------------------------------------------------------------------------+
+; t              ; 0     ; Signed Integer                                                                  ;
++----------------+-------+---------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: UART:inst11|ShiftRegister8:RSR|MUX4:\generateMUX:2:MUX4Inst ;
++----------------+-------+---------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                            ;
++----------------+-------+---------------------------------------------------------------------------------+
+; t              ; 0     ; Signed Integer                                                                  ;
++----------------+-------+---------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: UART:inst11|ShiftRegister8:RSR|MUX4:\generateMUX:1:MUX4Inst ;
++----------------+-------+---------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                            ;
++----------------+-------+---------------------------------------------------------------------------------+
+; t              ; 0     ; Signed Integer                                                                  ;
++----------------+-------+---------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: UART:inst11|ShiftRegister8:RSR|MUX4:\generateMUX:0:MUX4Inst ;
++----------------+-------+---------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                            ;
++----------------+-------+---------------------------------------------------------------------------------+
+; t              ; 0     ; Signed Integer                                                                  ;
++----------------+-------+---------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: UART:inst11|PackedRegister:SCSR ;
++----------------+-------+-----------------------------------------------------+
+; Parameter Name ; Value ; Type                                                ;
++----------------+-------+-----------------------------------------------------+
+; t              ; 7     ; Signed Integer                                      ;
++----------------+-------+-----------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: UART:inst11|ShiftRegister8:TSR|MUX4:\generateMUX:7:MUX4Inst ;
++----------------+-------+---------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                            ;
++----------------+-------+---------------------------------------------------------------------------------+
+; t              ; 0     ; Signed Integer                                                                  ;
++----------------+-------+---------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: UART:inst11|ShiftRegister8:TSR|MUX4:\generateMUX:6:MUX4Inst ;
++----------------+-------+---------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                            ;
++----------------+-------+---------------------------------------------------------------------------------+
+; t              ; 0     ; Signed Integer                                                                  ;
++----------------+-------+---------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: UART:inst11|ShiftRegister8:TSR|MUX4:\generateMUX:5:MUX4Inst ;
++----------------+-------+---------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                            ;
++----------------+-------+---------------------------------------------------------------------------------+
+; t              ; 0     ; Signed Integer                                                                  ;
++----------------+-------+---------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: UART:inst11|ShiftRegister8:TSR|MUX4:\generateMUX:4:MUX4Inst ;
++----------------+-------+---------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                            ;
++----------------+-------+---------------------------------------------------------------------------------+
+; t              ; 0     ; Signed Integer                                                                  ;
++----------------+-------+---------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: UART:inst11|ShiftRegister8:TSR|MUX4:\generateMUX:3:MUX4Inst ;
++----------------+-------+---------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                            ;
++----------------+-------+---------------------------------------------------------------------------------+
+; t              ; 0     ; Signed Integer                                                                  ;
++----------------+-------+---------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: UART:inst11|ShiftRegister8:TSR|MUX4:\generateMUX:2:MUX4Inst ;
++----------------+-------+---------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                            ;
++----------------+-------+---------------------------------------------------------------------------------+
+; t              ; 0     ; Signed Integer                                                                  ;
++----------------+-------+---------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: UART:inst11|ShiftRegister8:TSR|MUX4:\generateMUX:1:MUX4Inst ;
++----------------+-------+---------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                            ;
++----------------+-------+---------------------------------------------------------------------------------+
+; t              ; 0     ; Signed Integer                                                                  ;
++----------------+-------+---------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: UART:inst11|ShiftRegister8:TSR|MUX4:\generateMUX:0:MUX4Inst ;
++----------------+-------+---------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                            ;
++----------------+-------+---------------------------------------------------------------------------------+
+; t              ; 0     ; Signed Integer                                                                  ;
++----------------+-------+---------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: UART:inst11|PackedRegister:TDR ;
++----------------+-------+----------------------------------------------------+
+; Parameter Name ; Value ; Type                                               ;
++----------------+-------+----------------------------------------------------+
+; t              ; 7     ; Signed Integer                                     ;
++----------------+-------+----------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "UART:inst11|UARTTransmitterController:instUARTTransmitterController|Counter16D:CTR"        ;
++-------------+--------+----------+-------------------------------------------------------------------------------------+
+; Port        ; Type   ; Severity ; Details                                                                             ;
++-------------+--------+----------+-------------------------------------------------------------------------------------+
+; input[2..0] ; Input  ; Info     ; Stuck at GND                                                                        ;
+; input[3]    ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; expire      ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; value       ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++-------------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "UART:inst11|UARTTransmitterController:instUARTTransmitterController|enARdFF_2:\generateDFF:0:dffInst" ;
++----------+--------+----------+---------------------------------------------------------------------------------------------------+
+; Port     ; Type   ; Severity ; Details                                                                                           ;
++----------+--------+----------+---------------------------------------------------------------------------------------------------+
+; i_enable ; Input  ; Info     ; Stuck at VCC                                                                                      ;
+; o_q      ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.               ;
+; o_qbar   ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.               ;
++----------+--------+----------+---------------------------------------------------------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "UART:inst11|UARTTransmitterController:instUARTTransmitterController|enARdFF_2:\generateDFF:1:dffInst" ;
++----------+--------+----------+---------------------------------------------------------------------------------------------------+
+; Port     ; Type   ; Severity ; Details                                                                                           ;
++----------+--------+----------+---------------------------------------------------------------------------------------------------+
+; i_enable ; Input  ; Info     ; Stuck at VCC                                                                                      ;
+; o_q      ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.               ;
+; o_qbar   ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.               ;
++----------+--------+----------+---------------------------------------------------------------------------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "UART:inst11|ShiftRegister8:RSR|enARdFF_2:\generateDFF:0:DFFInst"                        ;
++----------+--------+----------+-------------------------------------------------------------------------------------+
+; Port     ; Type   ; Severity ; Details                                                                             ;
++----------+--------+----------+-------------------------------------------------------------------------------------+
+; i_enable ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; o_qbar   ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++----------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "UART:inst11|ShiftRegister8:RSR|enARdFF_2:\generateDFF:1:DFFInst"                        ;
++----------+--------+----------+-------------------------------------------------------------------------------------+
+; Port     ; Type   ; Severity ; Details                                                                             ;
++----------+--------+----------+-------------------------------------------------------------------------------------+
+; i_enable ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; o_qbar   ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++----------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "UART:inst11|ShiftRegister8:RSR|enARdFF_2:\generateDFF:2:DFFInst"                        ;
++----------+--------+----------+-------------------------------------------------------------------------------------+
+; Port     ; Type   ; Severity ; Details                                                                             ;
++----------+--------+----------+-------------------------------------------------------------------------------------+
+; i_enable ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; o_qbar   ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++----------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "UART:inst11|ShiftRegister8:RSR|enARdFF_2:\generateDFF:3:DFFInst"                        ;
++----------+--------+----------+-------------------------------------------------------------------------------------+
+; Port     ; Type   ; Severity ; Details                                                                             ;
++----------+--------+----------+-------------------------------------------------------------------------------------+
+; i_enable ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; o_qbar   ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++----------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "UART:inst11|ShiftRegister8:RSR|enARdFF_2:\generateDFF:4:DFFInst"                        ;
++----------+--------+----------+-------------------------------------------------------------------------------------+
+; Port     ; Type   ; Severity ; Details                                                                             ;
++----------+--------+----------+-------------------------------------------------------------------------------------+
+; i_enable ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; o_qbar   ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++----------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "UART:inst11|ShiftRegister8:RSR|enARdFF_2:\generateDFF:5:DFFInst"                        ;
++----------+--------+----------+-------------------------------------------------------------------------------------+
+; Port     ; Type   ; Severity ; Details                                                                             ;
++----------+--------+----------+-------------------------------------------------------------------------------------+
+; i_enable ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; o_qbar   ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++----------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "UART:inst11|ShiftRegister8:RSR|enARdFF_2:\generateDFF:6:DFFInst"                        ;
++----------+--------+----------+-------------------------------------------------------------------------------------+
+; Port     ; Type   ; Severity ; Details                                                                             ;
++----------+--------+----------+-------------------------------------------------------------------------------------+
+; i_enable ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; o_qbar   ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++----------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "UART:inst11|ShiftRegister8:RSR|enARdFF_2:\generateDFF:7:DFFInst"                        ;
++----------+--------+----------+-------------------------------------------------------------------------------------+
+; Port     ; Type   ; Severity ; Details                                                                             ;
++----------+--------+----------+-------------------------------------------------------------------------------------+
+; i_enable ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; o_qbar   ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++----------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "UART:inst11|UARTReceiverController:instIUARTReceiverController|Counter16D:CTR1"            ;
++-------------+--------+----------+-------------------------------------------------------------------------------------+
+; Port        ; Type   ; Severity ; Details                                                                             ;
++-------------+--------+----------+-------------------------------------------------------------------------------------+
+; input[2..0] ; Input  ; Info     ; Stuck at GND                                                                        ;
+; input[3]    ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; expire      ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; value       ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++-------------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "UART:inst11|UARTReceiverController:instIUARTReceiverController|Counter16D:CTR0|enARdFF_2:\generateDFF:0:dffInst" ;
++----------+--------+----------+--------------------------------------------------------------------------------------------------------------+
+; Port     ; Type   ; Severity ; Details                                                                                                      ;
++----------+--------+----------+--------------------------------------------------------------------------------------------------------------+
+; i_enable ; Input  ; Info     ; Stuck at VCC                                                                                                 ;
+; o_qbar   ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                          ;
++----------+--------+----------+--------------------------------------------------------------------------------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "UART:inst11|UARTReceiverController:instIUARTReceiverController|Counter16D:CTR0|enARdFF_2:\generateDFF:1:dffInst" ;
++----------+--------+----------+--------------------------------------------------------------------------------------------------------------+
+; Port     ; Type   ; Severity ; Details                                                                                                      ;
++----------+--------+----------+--------------------------------------------------------------------------------------------------------------+
+; i_enable ; Input  ; Info     ; Stuck at VCC                                                                                                 ;
+; o_qbar   ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                          ;
++----------+--------+----------+--------------------------------------------------------------------------------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "UART:inst11|UARTReceiverController:instIUARTReceiverController|Counter16D:CTR0|enARdFF_2:\generateDFF:2:dffInst" ;
++----------+--------+----------+--------------------------------------------------------------------------------------------------------------+
+; Port     ; Type   ; Severity ; Details                                                                                                      ;
++----------+--------+----------+--------------------------------------------------------------------------------------------------------------+
+; i_enable ; Input  ; Info     ; Stuck at VCC                                                                                                 ;
+; o_qbar   ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                          ;
++----------+--------+----------+--------------------------------------------------------------------------------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "UART:inst11|UARTReceiverController:instIUARTReceiverController|Counter16D:CTR0|enARdFF_2:\generateDFF:3:dffInst" ;
++----------+--------+----------+--------------------------------------------------------------------------------------------------------------+
+; Port     ; Type   ; Severity ; Details                                                                                                      ;
++----------+--------+----------+--------------------------------------------------------------------------------------------------------------+
+; i_enable ; Input  ; Info     ; Stuck at VCC                                                                                                 ;
+; o_qbar   ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                          ;
++----------+--------+----------+--------------------------------------------------------------------------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "UART:inst11|UARTReceiverController:instIUARTReceiverController|Counter16D:CTR0"       ;
++--------+--------+----------+-------------------------------------------------------------------------------------+
+; Port   ; Type   ; Severity ; Details                                                                             ;
++--------+--------+----------+-------------------------------------------------------------------------------------+
+; expire ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; value  ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++--------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "UART:inst11|UARTReceiverController:instIUARTReceiverController|enARdFF_2:\generateDFF:0:dffInst" ;
++----------+--------+----------+----------------------------------------------------------------------------------------------+
+; Port     ; Type   ; Severity ; Details                                                                                      ;
++----------+--------+----------+----------------------------------------------------------------------------------------------+
+; i_enable ; Input  ; Info     ; Stuck at VCC                                                                                 ;
+; o_q      ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.          ;
+; o_qbar   ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.          ;
++----------+--------+----------+----------------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "UART:inst11|UARTReceiverController:instIUARTReceiverController|enARdFF_2:\generateDFF:1:dffInst" ;
++----------+--------+----------+----------------------------------------------------------------------------------------------+
+; Port     ; Type   ; Severity ; Details                                                                                      ;
++----------+--------+----------+----------------------------------------------------------------------------------------------+
+; i_enable ; Input  ; Info     ; Stuck at VCC                                                                                 ;
+; o_q      ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.          ;
+; o_qbar   ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.          ;
++----------+--------+----------+----------------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "UART:inst11|UARTReceiverController:instIUARTReceiverController|enARdFF_2:\generateDFF:2:dffInst" ;
++----------+--------+----------+----------------------------------------------------------------------------------------------+
+; Port     ; Type   ; Severity ; Details                                                                                      ;
++----------+--------+----------+----------------------------------------------------------------------------------------------+
+; i_enable ; Input  ; Info     ; Stuck at VCC                                                                                 ;
+; o_q      ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.          ;
+; o_qbar   ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.          ;
++----------+--------+----------+----------------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "UART:inst11|UARTReceiverController:instIUARTReceiverController|enARdFF_2:\generateDFF:3:dffInst" ;
++----------+--------+----------+----------------------------------------------------------------------------------------------+
+; Port     ; Type   ; Severity ; Details                                                                                      ;
++----------+--------+----------+----------------------------------------------------------------------------------------------+
+; i_enable ; Input  ; Info     ; Stuck at VCC                                                                                 ;
+; o_q      ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.          ;
+; o_qbar   ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.          ;
++----------+--------+----------+----------------------------------------------------------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "UART:inst11|PackedRegister:SCCR|enARdFF_2:\generateDFF:0:DFFInst"                     ;
++--------+--------+----------+-------------------------------------------------------------------------------------+
+; Port   ; Type   ; Severity ; Details                                                                             ;
++--------+--------+----------+-------------------------------------------------------------------------------------+
+; o_qbar ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++--------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "UART:inst11|PackedRegister:SCCR|enARdFF_2:\generateDFF:1:DFFInst"                     ;
++--------+--------+----------+-------------------------------------------------------------------------------------+
+; Port   ; Type   ; Severity ; Details                                                                             ;
++--------+--------+----------+-------------------------------------------------------------------------------------+
+; o_qbar ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++--------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "UART:inst11|PackedRegister:SCCR|enARdFF_2:\generateDFF:2:DFFInst"                     ;
++--------+--------+----------+-------------------------------------------------------------------------------------+
+; Port   ; Type   ; Severity ; Details                                                                             ;
++--------+--------+----------+-------------------------------------------------------------------------------------+
+; o_qbar ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++--------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "UART:inst11|PackedRegister:SCCR|enARdFF_2:\generateDFF:3:DFFInst"                     ;
++--------+--------+----------+-------------------------------------------------------------------------------------+
+; Port   ; Type   ; Severity ; Details                                                                             ;
++--------+--------+----------+-------------------------------------------------------------------------------------+
+; o_qbar ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++--------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "UART:inst11|PackedRegister:SCCR|enARdFF_2:\generateDFF:4:DFFInst"                     ;
++--------+--------+----------+-------------------------------------------------------------------------------------+
+; Port   ; Type   ; Severity ; Details                                                                             ;
++--------+--------+----------+-------------------------------------------------------------------------------------+
+; o_qbar ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++--------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "UART:inst11|PackedRegister:SCCR|enARdFF_2:\generateDFF:5:DFFInst"                     ;
++--------+--------+----------+-------------------------------------------------------------------------------------+
+; Port   ; Type   ; Severity ; Details                                                                             ;
++--------+--------+----------+-------------------------------------------------------------------------------------+
+; o_qbar ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++--------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "UART:inst11|PackedRegister:SCCR|enARdFF_2:\generateDFF:6:DFFInst"                     ;
++--------+--------+----------+-------------------------------------------------------------------------------------+
+; Port   ; Type   ; Severity ; Details                                                                             ;
++--------+--------+----------+-------------------------------------------------------------------------------------+
+; o_qbar ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++--------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "UART:inst11|PackedRegister:SCCR|enARdFF_2:\generateDFF:7:DFFInst"                     ;
++--------+--------+----------+-------------------------------------------------------------------------------------+
+; Port   ; Type   ; Severity ; Details                                                                             ;
++--------+--------+----------+-------------------------------------------------------------------------------------+
+; o_qbar ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++--------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "UART:inst11|UARTBaudRateGenerator:instUARTBaudRateGenerator|Counter8:instCounter8Divider|enARdFF_2:\generateDFF:0:dffInst" ;
++--------+--------+----------+--------------------------------------------------------------------------------------------------------------------------+
+; Port   ; Type   ; Severity ; Details                                                                                                                  ;
++--------+--------+----------+--------------------------------------------------------------------------------------------------------------------------+
+; o_qbar ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                                      ;
++--------+--------+----------+--------------------------------------------------------------------------------------------------------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "UART:inst11|UARTBaudRateGenerator:instUARTBaudRateGenerator|Counter8:instCounter8Divider|enARdFF_2:\generateDFF:1:dffInst" ;
++--------+--------+----------+--------------------------------------------------------------------------------------------------------------------------+
+; Port   ; Type   ; Severity ; Details                                                                                                                  ;
++--------+--------+----------+--------------------------------------------------------------------------------------------------------------------------+
+; o_qbar ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                                      ;
++--------+--------+----------+--------------------------------------------------------------------------------------------------------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "UART:inst11|UARTBaudRateGenerator:instUARTBaudRateGenerator|Counter8:instCounter8Divider|enARdFF_2:\generateDFF:2:dffInst" ;
++--------+--------+----------+--------------------------------------------------------------------------------------------------------------------------+
+; Port   ; Type   ; Severity ; Details                                                                                                                  ;
++--------+--------+----------+--------------------------------------------------------------------------------------------------------------------------+
+; o_qbar ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                                      ;
++--------+--------+----------+--------------------------------------------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "UART:inst11|UARTBaudRateGenerator:instUARTBaudRateGenerator|Counter8:instCounter8Divider"  ;
++-------------+--------+----------+-------------------------------------------------------------------------------------+
+; Port        ; Type   ; Severity ; Details                                                                             ;
++-------------+--------+----------+-------------------------------------------------------------------------------------+
+; en          ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; value[1..0] ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++-------------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "UART:inst11|UARTBaudRateGenerator:instUARTBaudRateGenerator|Counter256:instCounter256|enARdFF_2:\generateDFF:0:dffInst" ;
++--------+--------+----------+-----------------------------------------------------------------------------------------------------------------------+
+; Port   ; Type   ; Severity ; Details                                                                                                               ;
++--------+--------+----------+-----------------------------------------------------------------------------------------------------------------------+
+; o_qbar ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                                   ;
++--------+--------+----------+-----------------------------------------------------------------------------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "UART:inst11|UARTBaudRateGenerator:instUARTBaudRateGenerator|Counter256:instCounter256|enARdFF_2:\generateDFF:1:dffInst" ;
++--------+--------+----------+-----------------------------------------------------------------------------------------------------------------------+
+; Port   ; Type   ; Severity ; Details                                                                                                               ;
++--------+--------+----------+-----------------------------------------------------------------------------------------------------------------------+
+; o_qbar ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                                   ;
++--------+--------+----------+-----------------------------------------------------------------------------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "UART:inst11|UARTBaudRateGenerator:instUARTBaudRateGenerator|Counter256:instCounter256|enARdFF_2:\generateDFF:2:dffInst" ;
++--------+--------+----------+-----------------------------------------------------------------------------------------------------------------------+
+; Port   ; Type   ; Severity ; Details                                                                                                               ;
++--------+--------+----------+-----------------------------------------------------------------------------------------------------------------------+
+; o_qbar ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                                   ;
++--------+--------+----------+-----------------------------------------------------------------------------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "UART:inst11|UARTBaudRateGenerator:instUARTBaudRateGenerator|Counter256:instCounter256|enARdFF_2:\generateDFF:3:dffInst" ;
++--------+--------+----------+-----------------------------------------------------------------------------------------------------------------------+
+; Port   ; Type   ; Severity ; Details                                                                                                               ;
++--------+--------+----------+-----------------------------------------------------------------------------------------------------------------------+
+; o_qbar ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                                   ;
++--------+--------+----------+-----------------------------------------------------------------------------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "UART:inst11|UARTBaudRateGenerator:instUARTBaudRateGenerator|Counter256:instCounter256|enARdFF_2:\generateDFF:4:dffInst" ;
++--------+--------+----------+-----------------------------------------------------------------------------------------------------------------------+
+; Port   ; Type   ; Severity ; Details                                                                                                               ;
++--------+--------+----------+-----------------------------------------------------------------------------------------------------------------------+
+; o_qbar ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                                   ;
++--------+--------+----------+-----------------------------------------------------------------------------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "UART:inst11|UARTBaudRateGenerator:instUARTBaudRateGenerator|Counter256:instCounter256|enARdFF_2:\generateDFF:5:dffInst" ;
++--------+--------+----------+-----------------------------------------------------------------------------------------------------------------------+
+; Port   ; Type   ; Severity ; Details                                                                                                               ;
++--------+--------+----------+-----------------------------------------------------------------------------------------------------------------------+
+; o_qbar ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                                   ;
++--------+--------+----------+-----------------------------------------------------------------------------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "UART:inst11|UARTBaudRateGenerator:instUARTBaudRateGenerator|Counter256:instCounter256|enARdFF_2:\generateDFF:6:dffInst" ;
++--------+--------+----------+-----------------------------------------------------------------------------------------------------------------------+
+; Port   ; Type   ; Severity ; Details                                                                                                               ;
++--------+--------+----------+-----------------------------------------------------------------------------------------------------------------------+
+; o_qbar ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                                   ;
++--------+--------+----------+-----------------------------------------------------------------------------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "UART:inst11|UARTBaudRateGenerator:instUARTBaudRateGenerator|Counter256:instCounter256|enARdFF_2:\generateDFF:7:dffInst" ;
++--------+--------+----------+-----------------------------------------------------------------------------------------------------------------------+
+; Port   ; Type   ; Severity ; Details                                                                                                               ;
++--------+--------+----------+-----------------------------------------------------------------------------------------------------------------------+
+; o_qbar ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                                   ;
++--------+--------+----------+-----------------------------------------------------------------------------------------------------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "UART:inst11|UARTBaudRateGenerator:instUARTBaudRateGenerator|Counter256:instCounter256" ;
++------+-------+----------+-----------------------------------------------------------------------------------------+
+; Port ; Type  ; Severity ; Details                                                                                 ;
++------+-------+----------+-----------------------------------------------------------------------------------------+
+; en   ; Input ; Info     ; Stuck at VCC                                                                            ;
++------+-------+----------+-----------------------------------------------------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "lab3:inst|counterJK4bit:inst1|jkFF_2:jk3"                                             ;
++--------+--------+----------+-------------------------------------------------------------------------------------+
+; Port   ; Type   ; Severity ; Details                                                                             ;
++--------+--------+----------+-------------------------------------------------------------------------------------+
+; o_qbar ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++--------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "lab3:inst|counterJK4bit:inst1|jkFF_2:jk2"                                             ;
++--------+--------+----------+-------------------------------------------------------------------------------------+
+; Port   ; Type   ; Severity ; Details                                                                             ;
++--------+--------+----------+-------------------------------------------------------------------------------------+
+; o_qbar ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++--------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "lab3:inst|counterJK4bit:inst1|jkFF_2:jk1"                                             ;
++--------+--------+----------+-------------------------------------------------------------------------------------+
+; Port   ; Type   ; Severity ; Details                                                                             ;
++--------+--------+----------+-------------------------------------------------------------------------------------+
+; o_qbar ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++--------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "lab3:inst|counterJK4bit:inst1|jkFF_2:jk0"                                             ;
++--------+--------+----------+-------------------------------------------------------------------------------------+
+; Port   ; Type   ; Severity ; Details                                                                             ;
++--------+--------+----------+-------------------------------------------------------------------------------------+
+; o_qbar ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++--------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++------------------------------------------------------------------------------+
+; Port Connectivity Checks: "lab3:inst|debouncer_2:cleanSSCS|enARdFF_2:second" ;
++----------+-------+----------+------------------------------------------------+
+; Port     ; Type  ; Severity ; Details                                        ;
++----------+-------+----------+------------------------------------------------+
+; i_enable ; Input ; Info     ; Stuck at VCC                                   ;
++----------+-------+----------+------------------------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "lab3:inst|debouncer_2:cleanSSCS|enARdFF_2:first"                                        ;
++----------+--------+----------+-------------------------------------------------------------------------------------+
+; Port     ; Type   ; Severity ; Details                                                                             ;
++----------+--------+----------+-------------------------------------------------------------------------------------+
+; i_enable ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; o_q      ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++----------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "lab3:inst|fsmController:inst89|enARdFF_2:ffy1"                                        ;
++--------+--------+----------+-------------------------------------------------------------------------------------+
+; Port   ; Type   ; Severity ; Details                                                                             ;
++--------+--------+----------+-------------------------------------------------------------------------------------+
+; o_qbar ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++--------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "lab3:inst|fsmController:inst89|enARdFF_2:ffy0"                                        ;
++--------+--------+----------+-------------------------------------------------------------------------------------+
+; Port   ; Type   ; Severity ; Details                                                                             ;
++--------+--------+----------+-------------------------------------------------------------------------------------+
+; o_qbar ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++--------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:00     ;
++----------------+--------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus II 64-Bit Analysis & Synthesis
+    Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+    Info: Processing started: Sat Nov 02 17:17:31 2024
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off project -c project
+Info (20030): Parallel compilation is enabled and will use 16 of the 16 processors detected
+Info (12021): Found 2 design units, including 1 entities, in source file mux8.vhd
+    Info (12022): Found design unit 1: MUX8-Structural
+    Info (12023): Found entity 1: MUX8
+Info (12021): Found 2 design units, including 1 entities, in source file counter8.vhd
+    Info (12022): Found design unit 1: Counter8-Structural
+    Info (12023): Found entity 1: Counter8
+Info (12021): Found 2 design units, including 1 entities, in source file counter256.vhd
+    Info (12022): Found design unit 1: Counter256-Structural
+    Info (12023): Found entity 1: Counter256
+Info (12021): Found 2 design units, including 1 entities, in source file clockdivider.vhd
+    Info (12022): Found design unit 1: ClockDivider-RTL
+    Info (12023): Found entity 1: ClockDivider
+Info (12021): Found 1 design units, including 1 entities, in source file uart.bdf
+    Info (12023): Found entity 1: UART
+Info (12021): Found 2 design units, including 1 entities, in source file uartfsm.vhd
+    Info (12022): Found design unit 1: UARTFSM-Structural
+    Info (12023): Found entity 1: UARTFSM
+Info (12021): Found 2 design units, including 1 entities, in source file uartbaudrategenerator.vhd
+    Info (12022): Found design unit 1: UARTBaudRateGenerator-Structural
+    Info (12023): Found entity 1: UARTBaudRateGenerator
+Info (12021): Found 2 design units, including 1 entities, in source file shiftregister8.vhd
+    Info (12022): Found design unit 1: ShiftRegister8-Structural
+    Info (12023): Found entity 1: ShiftRegister8
+Info (12021): Found 2 design units, including 1 entities, in source file packedregister.vhd
+    Info (12022): Found design unit 1: PackedRegister-Structural
+    Info (12023): Found entity 1: PackedRegister
+Info (12021): Found 1 design units, including 1 entities, in source file lab3.bdf
+    Info (12023): Found entity 1: lab3
+Info (12021): Found 2 design units, including 1 entities, in source file jkff_2.vhd
+    Info (12022): Found design unit 1: jkFF_2-rtl
+    Info (12023): Found entity 1: jkFF_2
+Info (12021): Found 2 design units, including 1 entities, in source file fsmcontroller.vhd
+    Info (12022): Found design unit 1: fsmController-rtl
+    Info (12023): Found entity 1: fsmController
+Info (12021): Found 2 design units, including 1 entities, in source file espl4counter.vhd
+    Info (12022): Found design unit 1: ESPL4counter-rtl
+    Info (12023): Found entity 1: ESPL4counter
+Info (12021): Found 2 design units, including 1 entities, in source file enardff_2.vhd
+    Info (12022): Found design unit 1: enARdFF_2-rtl
+    Info (12023): Found entity 1: enARdFF_2
+Info (12021): Found 2 design units, including 1 entities, in source file dff_2.vhd
+    Info (12022): Found design unit 1: dFF_2-rtl
+    Info (12023): Found entity 1: dFF_2
+Info (12021): Found 2 design units, including 1 entities, in source file dec_7seg.vhd
+    Info (12022): Found design unit 1: dec_7seg-rtl
+    Info (12023): Found entity 1: dec_7seg
+Info (12021): Found 2 design units, including 1 entities, in source file debouncer_2.vhd
+    Info (12022): Found design unit 1: debouncer_2-rtl
+    Info (12023): Found entity 1: debouncer_2
+Info (12021): Found 2 design units, including 1 entities, in source file debouncer.vhd
+    Info (12022): Found design unit 1: debouncer-fsm
+    Info (12023): Found entity 1: debouncer
+Info (12021): Found 2 design units, including 1 entities, in source file counterjk4bit.vhd
+    Info (12022): Found design unit 1: counterJK4bit-rtl
+    Info (12023): Found entity 1: counterJK4bit
+Info (12021): Found 2 design units, including 1 entities, in source file comparator4bit.vhd
+    Info (12022): Found design unit 1: comparator4bit-bhv
+    Info (12023): Found entity 1: comparator4bit
+Info (12021): Found 2 design units, including 1 entities, in source file clk_div.vhd
+    Info (12022): Found design unit 1: clk_div-a
+    Info (12023): Found entity 1: clk_div
+Info (12021): Found 1 design units, including 1 entities, in source file toplevelproject.bdf
+    Info (12023): Found entity 1: toplevelProject
+Info (12127): Elaborating entity "toplevelProject" for the top level hierarchy
+Warning (275043): Pin "TxD" is missing source
+Warning (275043): Pin "BCD1[3..0]" is missing source
+Warning (275043): Pin "BCD2[3..0]" is missing source
+Warning (275009): Pin "RxD" not connected
+Info (12128): Elaborating entity "lab3" for hierarchy "lab3:inst"
+Info (12128): Elaborating entity "fsmController" for hierarchy "lab3:inst|fsmController:inst89"
+Info (12128): Elaborating entity "enARdFF_2" for hierarchy "lab3:inst|fsmController:inst89|enARdFF_2:ffy0"
+Info (12128): Elaborating entity "debouncer_2" for hierarchy "lab3:inst|debouncer_2:cleanSSCS"
+Warning (10036): Verilog HDL or VHDL warning at debouncer_2.vhd(38): object "int_q1Output" assigned a value but never read
+Info (12128): Elaborating entity "comparator4bit" for hierarchy "lab3:inst|comparator4bit:inst5"
+Info (12128): Elaborating entity "counterJK4bit" for hierarchy "lab3:inst|counterJK4bit:inst1"
+Info (12128): Elaborating entity "jkFF_2" for hierarchy "lab3:inst|counterJK4bit:inst1|jkFF_2:jk0"
+Info (12128): Elaborating entity "dFF_2" for hierarchy "lab3:inst|counterJK4bit:inst1|jkFF_2:jk0|dFF_2:dFlipFlop"
+Info (12128): Elaborating entity "clk_div" for hierarchy "clk_div:inst2"
+Info (12128): Elaborating entity "UART" for hierarchy "UART:inst11"
+Warning (275011): Block or symbol "OR2" of instance "instOr" overlaps another block or symbol
+Warning (275008): Primitive "VCC" of instance "instVCC" not used
+Info (12128): Elaborating entity "UARTBaudRateGenerator" for hierarchy "UART:inst11|UARTBaudRateGenerator:instUARTBaudRateGenerator"
+Critical Warning (10920): VHDL Incomplete Partial Association warning at UARTBaudRateGenerator.vhd(96): port or argument "VALUE" has 2/3 unassociated elements
+Info (12128): Elaborating entity "ClockDivider" for hierarchy "UART:inst11|UARTBaudRateGenerator:instUARTBaudRateGenerator|ClockDivider:instClockDivider"
+Info (12128): Elaborating entity "Counter256" for hierarchy "UART:inst11|UARTBaudRateGenerator:instUARTBaudRateGenerator|Counter256:instCounter256"
+Info (12128): Elaborating entity "MUX8" for hierarchy "UART:inst11|UARTBaudRateGenerator:instUARTBaudRateGenerator|MUX8:instMUX8"
+Info (12128): Elaborating entity "Counter8" for hierarchy "UART:inst11|UARTBaudRateGenerator:instUARTBaudRateGenerator|Counter8:instCounter8Divider"
+Info (12128): Elaborating entity "ClockDivider" for hierarchy "UART:inst11|ClockDivider:inst"
+Info (12128): Elaborating entity "PackedRegister" for hierarchy "UART:inst11|PackedRegister:SCCR"
+Warning (12125): Using design file decoder4.vhd, which is not specified as a design file for the current project, but contains definitions for 2 design units and 1 entities in project
+    Info (12022): Found design unit 1: Decoder4-Structural
+    Info (12023): Found entity 1: Decoder4
+Info (12128): Elaborating entity "Decoder4" for hierarchy "UART:inst11|Decoder4:AddressDecoder"
+Info (10041): Inferred latch for "O[0]" at decoder4.vhd(16)
+Info (10041): Inferred latch for "O[1]" at decoder4.vhd(16)
+Info (10041): Inferred latch for "O[2]" at decoder4.vhd(16)
+Info (10041): Inferred latch for "O[3]" at decoder4.vhd(16)
+Info (12128): Elaborating entity "MUX8" for hierarchy "UART:inst11|MUX8:Bus"
+Warning (12125): Using design file uartreceivercontroller.vhd, which is not specified as a design file for the current project, but contains definitions for 2 design units and 1 entities in project
+    Info (12022): Found design unit 1: UARTReceiverController-Structural
+    Info (12023): Found entity 1: UARTReceiverController
+Info (12128): Elaborating entity "UARTReceiverController" for hierarchy "UART:inst11|UARTReceiverController:instIUARTReceiverController"
+Warning (10541): VHDL Signal Declaration warning at uartreceivercontroller.vhd(13): used implicit default value for signal "RDRF_LOAD" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
+Warning (10541): VHDL Signal Declaration warning at uartreceivercontroller.vhd(14): used implicit default value for signal "RDRF_WRITE" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
+Warning (10541): VHDL Signal Declaration warning at uartreceivercontroller.vhd(16): used implicit default value for signal "OE_LOAD" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
+Warning (10541): VHDL Signal Declaration warning at uartreceivercontroller.vhd(17): used implicit default value for signal "OE_WRITE" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
+Warning (10541): VHDL Signal Declaration warning at uartreceivercontroller.vhd(19): used implicit default value for signal "FE_LOAD" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
+Warning (10541): VHDL Signal Declaration warning at uartreceivercontroller.vhd(20): used implicit default value for signal "FE_WRITE" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
+Warning (10541): VHDL Signal Declaration warning at uartreceivercontroller.vhd(22): used implicit default value for signal "RSR_SHIFT" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
+Warning (10541): VHDL Signal Declaration warning at uartreceivercontroller.vhd(24): used implicit default value for signal "RDR_LOAD" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
+Warning (10541): VHDL Signal Declaration warning at uartreceivercontroller.vhd(49): used implicit default value for signal "CTR0_EN" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
+Warning (10541): VHDL Signal Declaration warning at uartreceivercontroller.vhd(50): used implicit default value for signal "CTR0_LOAD" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
+Warning (10541): VHDL Signal Declaration warning at uartreceivercontroller.vhd(51): used implicit default value for signal "CTR0_IN" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
+Warning (10036): Verilog HDL or VHDL warning at uartreceivercontroller.vhd(52): object "CTR0_EXPIRE" assigned a value but never read
+Warning (10541): VHDL Signal Declaration warning at uartreceivercontroller.vhd(54): used implicit default value for signal "CTR1_CLK" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
+Warning (10541): VHDL Signal Declaration warning at uartreceivercontroller.vhd(55): used implicit default value for signal "CTR1_EN" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
+Warning (10541): VHDL Signal Declaration warning at uartreceivercontroller.vhd(56): used implicit default value for signal "CTR1_LOAD" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
+Warning (10036): Verilog HDL or VHDL warning at uartreceivercontroller.vhd(57): object "CTR1_EXPIRE" assigned a value but never read
+Warning (10541): VHDL Signal Declaration warning at uartreceivercontroller.vhd(59): used implicit default value for signal "signalD" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
+Warning (10036): Verilog HDL or VHDL warning at uartreceivercontroller.vhd(60): object "signalQ" assigned a value but never read
+Warning (12125): Using design file counter16d.vhd, which is not specified as a design file for the current project, but contains definitions for 2 design units and 1 entities in project
+    Info (12022): Found design unit 1: Counter16D-Structural
+    Info (12023): Found entity 1: Counter16D
+Info (12128): Elaborating entity "Counter16D" for hierarchy "UART:inst11|UARTReceiverController:instIUARTReceiverController|Counter16D:CTR0"
+Info (10041): Inferred latch for "signalD[0]" at counter16d.vhd(39)
+Info (10041): Inferred latch for "signalD[1]" at counter16d.vhd(39)
+Info (10041): Inferred latch for "signalD[2]" at counter16d.vhd(39)
+Info (10041): Inferred latch for "signalD[3]" at counter16d.vhd(39)
+Info (12128): Elaborating entity "ShiftRegister8" for hierarchy "UART:inst11|ShiftRegister8:RSR"
+Warning (12125): Using design file mux4.vhd, which is not specified as a design file for the current project, but contains definitions for 2 design units and 1 entities in project
+    Info (12022): Found design unit 1: MUX4-Structural
+    Info (12023): Found entity 1: MUX4
+Info (12128): Elaborating entity "MUX4" for hierarchy "UART:inst11|ShiftRegister8:RSR|MUX4:\generateMUX:7:MUX4Inst"
+Warning (12125): Using design file uarttransmittercontroller.vhd, which is not specified as a design file for the current project, but contains definitions for 2 design units and 1 entities in project
+    Info (12022): Found design unit 1: UARTTransmitterController-Structural
+    Info (12023): Found entity 1: UARTTransmitterController
+Info (12128): Elaborating entity "UARTTransmitterController" for hierarchy "UART:inst11|UARTTransmitterController:instUARTTransmitterController"
+Warning (10541): VHDL Signal Declaration warning at uarttransmittercontroller.vhd(13): used implicit default value for signal "TDRE_LOAD" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
+Warning (10541): VHDL Signal Declaration warning at uarttransmittercontroller.vhd(14): used implicit default value for signal "TDRE_WRITE" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
+Warning (10541): VHDL Signal Declaration warning at uarttransmittercontroller.vhd(16): used implicit default value for signal "TDR_LOAD" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
+Warning (10541): VHDL Signal Declaration warning at uarttransmittercontroller.vhd(18): used implicit default value for signal "TSR_LOAD" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
+Warning (10541): VHDL Signal Declaration warning at uarttransmittercontroller.vhd(19): used implicit default value for signal "TSR_SHIFT" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
+Warning (10541): VHDL Signal Declaration warning at uarttransmittercontroller.vhd(21): used implicit default value for signal "TxDFF_SET" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
+Warning (10541): VHDL Signal Declaration warning at uarttransmittercontroller.vhd(22): used implicit default value for signal "TxDFF_LOAD" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
+Warning (10541): VHDL Signal Declaration warning at uarttransmittercontroller.vhd(47): used implicit default value for signal "CTR_LOAD" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
+Warning (10541): VHDL Signal Declaration warning at uarttransmittercontroller.vhd(48): used implicit default value for signal "CTR_EN" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
+Warning (10036): Verilog HDL or VHDL warning at uarttransmittercontroller.vhd(49): object "CTR_EXPIRE" assigned a value but never read
+Warning (10541): VHDL Signal Declaration warning at uarttransmittercontroller.vhd(51): used implicit default value for signal "signalD" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
+Warning (10036): Verilog HDL or VHDL warning at uarttransmittercontroller.vhd(52): object "signalQ" assigned a value but never read
+Info (12128): Elaborating entity "UARTFSM" for hierarchy "UARTFSM:inst9"
+Warning (10541): VHDL Signal Declaration warning at UARTFSM.vhd(13): used implicit default value for signal "UARTReceiverReset" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
+Warning (10541): VHDL Signal Declaration warning at UARTFSM.vhd(14): used implicit default value for signal "Address" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
+Warning (10541): VHDL Signal Declaration warning at UARTFSM.vhd(15): used implicit default value for signal "Read1Write0" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
+Warning (10541): VHDL Signal Declaration warning at UARTFSM.vhd(17): used implicit default value for signal "DataTx" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
+Warning (13024): Output pins are stuck at VCC or GND
+    Warning (13410): Pin "TxD" is stuck at GND
+    Warning (13410): Pin "BCD1[3]" is stuck at GND
+    Warning (13410): Pin "BCD1[2]" is stuck at GND
+    Warning (13410): Pin "BCD1[1]" is stuck at GND
+    Warning (13410): Pin "BCD1[0]" is stuck at GND
+    Warning (13410): Pin "BCD2[3]" is stuck at GND
+    Warning (13410): Pin "BCD2[2]" is stuck at GND
+    Warning (13410): Pin "BCD2[1]" is stuck at GND
+    Warning (13410): Pin "BCD2[0]" is stuck at GND
+Info (286030): Timing-Driven Synthesis is running
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Warning (21074): Design contains 1 input pin(s) that do not drive logic
+    Warning (15610): No output dependent on input pin "RxD"
+Info (21057): Implemented 65 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 12 input pins
+    Info (21059): Implemented 15 output pins
+    Info (21061): Implemented 38 logic cells
+Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 59 warnings
+    Info: Peak virtual memory: 4656 megabytes
+    Info: Processing ended: Sat Nov 02 17:17:33 2024
+    Info: Elapsed time: 00:00:02
+    Info: Total CPU time (on all processors): 00:00:02
+
+
