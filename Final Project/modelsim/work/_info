@@ -1,0 +1,175 @@
+m255
+K3
+13
+cModel Technology
+dG:\Desktop\Lab3\modelsim stuff
+Ecounter16d
+Z0 w1658566510
+Z1 DPx4 ieee 16 vital_primitives 0 22 9W@YP9_VCb?_GCJ8e:;YQ0
+Z2 DPx6 altera 11 dffeas_pack 0 22 Giz7C_dB_=WZS^1=3P8073
+Z3 DPx4 ieee 12 vital_timing 0 22 7h8zz2S4HVg:a;2TBMI[j1
+Z4 DPx6 altera 28 altera_primitives_components 0 22 W]_:GkoiISnEn83KNb:3:2
+Z5 DPx8 synopsys 10 attributes 0 22 J^T`lPA_8_J<l8kQiVE]>2
+Z6 DPx4 ieee 14 std_logic_misc 0 22 >dU:RInm^_6_mBJ^<6QGY2
+Z7 DPx3 std 6 textio 0 22 5>J:;AW>W0[[dW0I6EN1Q0
+Z8 DPx4 ieee 14 std_logic_1164 0 22 5=aWaoGZSMWIcH0i^f`XF1
+Z9 dG:\Desktop\Final Project\modelsim
+Z10 8G:/Desktop/Final Project/Counter16D.vhd
+Z11 FG:/Desktop/Final Project/Counter16D.vhd
+l0
+L7
+Vn^U0k`QP2HLb?aJ7GLfi>0
+Z12 OV;C;10.1d;51
+32
+Z13 !s108 1731363252.105000
+Z14 !s90 -reportprogress|300|-work|work|-2002|-explicit|G:/Desktop/Final Project/Counter16D.vhd|
+Z15 !s107 G:/Desktop/Final Project/Counter16D.vhd|
+Z16 o-work work -2002 -explicit -O0
+Z17 tExplicit 1
+!s100 <o@lQFnhH7P07iKj7T^@=3
+!i10b 1
+Astructural
+R1
+R2
+R3
+R4
+R5
+R6
+R7
+R8
+DEx4 work 10 counter16d 0 22 n^U0k`QP2HLb?aJ7GLfi>0
+l30
+L17
+Vm4h_a1^cl@nIdMlV?5D:81
+R12
+32
+R13
+R14
+R15
+R16
+R17
+!s100 oV_3GF:VaUVJ[_cgVn[8b2
+!i10b 1
+Euartreceivercontroller
+Z18 w1658566510
+R1
+R2
+R3
+R4
+R7
+R8
+R9
+Z19 8G:/Desktop/Final Project/UARTReceiverController.vhd
+Z20 FG:/Desktop/Final Project/UARTReceiverController.vhd
+l0
+L6
+VdF37iA3kS2J4R15_h>LY71
+R12
+32
+Z21 !s108 1731363252.423000
+Z22 !s90 -reportprogress|300|-work|work|-2002|-explicit|G:/Desktop/Final Project/UARTReceiverController.vhd|
+Z23 !s107 G:/Desktop/Final Project/UARTReceiverController.vhd|
+R16
+R17
+!s100 R;9`a=o<WW7TR9^[cUA[B3
+!i10b 1
+Astructural
+R1
+R2
+R3
+R4
+R7
+R8
+DEx4 work 22 uartreceivercontroller 0 22 dF37iA3kS2J4R15_h>LY71
+l61
+L28
+V;`Z[N2HfgY4bU>ZQEX^CX1
+R12
+32
+R21
+R22
+R23
+R16
+R17
+!s100 fJ@Kaz;6gGdRV4C6]4g>:1
+!i10b 1
+Euarttransmittercontroller
+R18
+R1
+R2
+R3
+R4
+R7
+R8
+R9
+Z24 8G:/Desktop/Final Project/UARTTransmitterController.vhd
+Z25 FG:/Desktop/Final Project/UARTTransmitterController.vhd
+l0
+L6
+V3E^@m:P_ocEL^l5>VBzZ]3
+R12
+32
+Z26 !s108 1731363252.618000
+Z27 !s90 -reportprogress|300|-work|work|-2002|-explicit|G:/Desktop/Final Project/UARTTransmitterController.vhd|
+Z28 !s107 G:/Desktop/Final Project/UARTTransmitterController.vhd|
+R16
+R17
+!s100 S2;`M78HYIeSP;haQgQ]l0
+!i10b 1
+Astructural
+R1
+R2
+R3
+R4
+R7
+R8
+DEx4 work 25 uarttransmittercontroller 0 22 3E^@m:P_ocEL^l5>VBzZ]3
+l53
+L26
+VI1DiAmQSWaicQgbWk^AKX2
+R12
+32
+R26
+R27
+R28
+R16
+R17
+!s100 ?LeAXIVH<<J;IQL6N_@UH0
+!i10b 1
+Euarttransmittercontroller_tb
+Z29 w1731363230
+Z30 DPx4 ieee 11 numeric_std 0 22 O3PF8EB`?j9=z7KT`fn941
+R7
+R8
+R9
+Z31 8G:/Desktop/Final Project/modelsim/UARTTransmitterController_tb.vhd
+Z32 FG:/Desktop/Final Project/modelsim/UARTTransmitterController_tb.vhd
+l0
+L5
+VzdeCMJzFXMMc0C6DV=EGJ1
+!s100 5LV95k@nI4GjU48VQM>GD2
+R12
+32
+!i10b 1
+Z33 !s108 1731363252.828000
+Z34 !s90 -reportprogress|300|-work|work|-2002|-explicit|G:/Desktop/Final Project/modelsim/UARTTransmitterController_tb.vhd|
+Z35 !s107 G:/Desktop/Final Project/modelsim/UARTTransmitterController_tb.vhd|
+R16
+R17
+Atestbench
+R30
+R7
+R8
+DEx4 work 28 uarttransmittercontroller_tb 0 22 zdeCMJzFXMMc0C6DV=EGJ1
+l45
+L8
+V9eYzAMKMlH8KX]zdWG`3B1
+!s100 fL<oKaZCjee;6Yb614]JK0
+R12
+32
+!i10b 1
+R33
+R34
+R35
+R16
+R17

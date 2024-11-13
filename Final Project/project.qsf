@@ -58,9 +58,6 @@ set_global_assignment -name VHDL_FILE Counter256.vhd
 set_global_assignment -name VHDL_FILE ClockDivider.vhd
 set_global_assignment -name BDF_FILE UART.bdf
 set_global_assignment -name VHDL_FILE UARTFSM.vhd
-set_global_assignment -name VHDL_FILE UARTBaudRateGenerator.vhd
-set_global_assignment -name VHDL_FILE ShiftRegister8.vhd
-set_global_assignment -name VHDL_FILE PackedRegister.vhd
 set_global_assignment -name BDF_FILE lab3.bdf
 set_global_assignment -name VHDL_FILE jkFF_2.vhd
 set_global_assignment -name VHDL_FILE fsmController.vhd

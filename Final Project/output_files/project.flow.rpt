@@ -1,5 +1,5 @@
 Flow report for project
-Sat Nov 02 17:17:54 2024
+Mon Nov 11 17:07:36 2024
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -40,7 +40,7 @@ applicable agreement for further details.
 +--------------------------------------------------------------------------------------+
 ; Flow Summary                                                                         ;
 +------------------------------------+-------------------------------------------------+
-; Flow Status                        ; Successful - Sat Nov 02 17:17:51 2024           ;
+; Flow Status                        ; Successful - Mon Nov 11 17:07:33 2024           ;
 ; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
 ; Revision Name                      ; project                                         ;
 ; Top-level Entity Name              ; toplevelProject                                 ;
@@ -64,7 +64,7 @@ applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 11/02/2024 17:17:31 ;
+; Start date & time ; 11/11/2024 17:07:09 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; project             ;
 +-------------------+---------------------+
@@ -75,7 +75,7 @@ applicable agreement for further details.
 +-------------------------------------+---------------------------------------+---------------+-----------------+------------+
 ; Assignment Name                     ; Value                                 ; Default Value ; Entity Name     ; Section Id ;
 +-------------------------------------+---------------------------------------+---------------+-----------------+------------+
-; COMPILER_SIGNATURE_ID               ; 74774234311087.173058225101796        ; --            ; --              ; --         ;
+; COMPILER_SIGNATURE_ID               ; 74774234311087.173136282939880        ; --            ; --              ; --         ;
 ; MAX_CORE_JUNCTION_TEMP              ; 85                                    ; --            ; --              ; --         ;
 ; MIN_CORE_JUNCTION_TEMP              ; 0                                     ; --            ; --              ; --         ;
 ; NOMINAL_CORE_SUPPLY_VOLTAGE         ; 1.2V                                  ; --            ; --              ; --         ;
@@ -94,11 +94,11 @@ applicable agreement for further details.
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name               ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis      ; 00:00:02     ; 1.0                     ; 4656 MB             ; 00:00:02                           ;
-; Fitter                    ; 00:00:12     ; 3.1                     ; 6275 MB             ; 00:00:25                           ;
+; Analysis & Synthesis      ; 00:00:04     ; 1.0                     ; 4674 MB             ; 00:00:02                           ;
+; Fitter                    ; 00:00:15     ; 2.8                     ; 6255 MB             ; 00:00:26                           ;
 ; Assembler                 ; 00:00:04     ; 1.0                     ; 4584 MB             ; 00:00:04                           ;
-; TimeQuest Timing Analyzer ; 00:00:02     ; 1.0                     ; 4776 MB             ; 00:00:02                           ;
-; Total                     ; 00:00:20     ; --                      ; --                  ; 00:00:33                           ;
+; TimeQuest Timing Analyzer ; 00:00:02     ; 1.0                     ; 4787 MB             ; 00:00:02                           ;
+; Total                     ; 00:00:25     ; --                      ; --                  ; 00:00:34                           ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
