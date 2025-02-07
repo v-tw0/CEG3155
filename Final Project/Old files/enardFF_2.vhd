@@ -1,16 +1,16 @@
 --------------------------------------------------------------------------------
--- Title         : Type D Flip-Flop - 2nd realization
+-- Title         : Enabled Asynchronous Reset D Flip-Flop - 1st realization
 -- Project       : VHDL Synthesis Overview
 -------------------------------------------------------------------------------
--- File          : dFF_2.vhd
+-- File          : enARdFF_2.vhd
 -- Author        : Rami Abielmona  <rabielmo@site.uottawa.ca>
 -- Created       : 2003/05/17
 -- Last modified : 2007/09/25
 -------------------------------------------------------------------------------
--- Description : This file creates a flip-flop of type D as defined in the VHDL
---		 Synthesis lecture.  The architecture is done at the RTL
---		 abstraction level and the implementation is done in structural
---		 VHDL.
+-- Description : This file creates an enabled asynchronous reset D flip-flop 
+--		 as defined in the VHDL Synthesis lecture.  The architecture is 
+--		 done at the RTL abstraction level and the implementation is done 
+--		 in structural VHDL.
 -------------------------------------------------------------------------------
 -- Modification history :
 -- 2003.05.17 	R. Abielmona		Creation
@@ -28,23 +28,29 @@
 LIBRARY ieee;
 USE ieee.std_logic_1164.ALL;
 
-ENTITY dFF_2 IS
+ENTITY enARdFF_2 IS
 	PORT(
+		i_resetBar	: IN	STD_LOGIC;
 		i_d		: IN	STD_LOGIC;
+		i_enable	: IN	STD_LOGIC;
 		i_clock		: IN	STD_LOGIC;
 		o_q, o_qBar	: OUT	STD_LOGIC);
-END dFF_2;
+END enARdFF_2;
 
-ARCHITECTURE rtl OF dFF_2 IS
-	SIGNAL int_q : STD_LOGIC := '0';
+ARCHITECTURE rtl OF enARdFF_2 IS
+	SIGNAL int_q : STD_LOGIC;
 
 BEGIN
 
 oneBitRegister:
-PROCESS(i_clock)
+PROCESS(i_resetBar, i_clock)
 BEGIN
-	IF (i_clock'EVENT and i_clock = '1') THEN
-		int_q	<=	i_d;
+	IF (i_resetBar = '0') THEN
+		int_q	<= '0';
+	ELSIF (i_clock'EVENT and i_clock = '1') THEN
+		IF (i_enable = '1') THEN
+			int_q	<=	i_d;
+		END IF;
 	END IF;
 END PROCESS oneBitRegister;
 

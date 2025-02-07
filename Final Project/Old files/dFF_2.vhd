@@ -36,7 +36,7 @@ ENTITY dFF_2 IS
 END dFF_2;
 
 ARCHITECTURE rtl OF dFF_2 IS
-	SIGNAL int_q : STD_LOGIC := '0';
+	SIGNAL int_q : STD_LOGIC;
 
 BEGIN
 
